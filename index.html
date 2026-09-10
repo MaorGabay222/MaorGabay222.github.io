@@ -3,46 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>מאור גבאי | מומחה סייבר וחקירות דיגיטליות (DFIR) לעסקים</title>
-    <meta name="description" content="הגן על העסק שלך מפני מתקפות סייבר, כופר ודליפת מידע. מאור גבאי - חוקר סייבר ומומחה תגובה לאירועים (DFIR) מעניק מעטפת הגנה מקיפה המותאמת לעסקים קטנים ובינוניים בישראל.">
+    <!-- Metadata Requirements -->
+    <title>מאור גבאי | אבטחת מידע ותגובה לאירועי סייבר לעסקים קטנים</title>
+    <meta name="description" content="אבחון מצב אבטחת המידע, תוכנית שיפור, ליווי תקופתי והיערכות לטיפול באירועי סייבר לעסקים קטנים.">
     
-    <!-- Open Graph Metadata for Social / WhatsApp Sharing -->
-    <meta property="og:title" content="מאור גבאי | מומחה סייבר וחקירות דיגיטליות (DFIR) לעסקים">
-    <meta property="og:description" content="אל תחכה לפריצה הבאה. מגן סייבר מקיף, תגובה מהירה לאירועים וליווי אישי לעסקים קטנים בישראל.">
+    <!-- Open Graph Sharing Metadata -->
+    <meta property="og:title" content="האם העסק שלך מוכן לאירוע סייבר?">
+    <meta property="og:description" content="ליווי אישי לעסקים קטנים: אבחון מצב האבטחה, תוכנית שיפור, בדיקות תקופתיות והיערכות לאירועי סייבר.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://maorgabay222.github.io/">
     
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23F59E0B'><rect x='3' y='3' width='18' height='18' rx='2' fill='none' stroke='%23F59E0B' stroke-width='2'/><circle cx='12' cy='12' r='4' fill='none' stroke='%23F59E0B' stroke-width='1.5'/><path d='M12 3v4M12 17v4M3 12h4M17 12h4' stroke='%23F59E0B' stroke-width='1.5'/></svg>">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23F97316'><rect x='3' y='3' width='18' height='18' rx='2' fill='none' stroke='%23F97316' stroke-width='2'/><circle cx='12' cy='12' r='4' fill='none' stroke='%23F97316' stroke-width='1.5'/><path d='M12 3v4M12 17v4M3 12h4M17 12h4' stroke='%23F97316' stroke-width='1.5'/></svg>">
 
-    <!-- Fonts (Heebo, Assistant & Fira Code) -->
+    <!-- Fonts (Heebo & Assistant) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700;800&family=Fira+Code:wght@300;400;500;600;700&family=Heebo:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700;800&family=Heebo:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
 
     <!-- Tailwind CSS via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Tailwind Configuration for Tactical Cyber Aesthetic -->
+    <!-- Tailwind Custom Configuration -->
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        tactical: {
-                            bg: '#090A0D',        // Dark slate-black
-                            card: '#0E1116',      // Premium dark slate card
-                            border: '#1C202B',    // Clean slate-blue 1px border
-                            borderActive: '#2D3545', // Highlighted border
-                            amber: '#F59E0B',     // Highlight tactical amber color
-                            amberDim: 'rgba(245, 158, 11, 0.05)',
-                            paper: '#F4F4F0',     // Sharp off-white body text
-                            muted: '#8A99AD'      // Technical muted gray text
+                        brand: {
+                            bg: '#0B0D11',        // Deep Graphite/Black
+                            card: '#12141C',      // Subtle card background
+                            border: '#1E222E',    // Restrained soft borders
+                            orange: '#F97316',    // Visually prominent Orange Accent
+                            orangeHover: '#EA580C',
+                            textPrimary: '#F4F4F0', // High contrast off-white text
+                            textSecondary: '#94A3B8' // Readable gray text
                         }
                     },
                     fontFamily: {
                         sans: ['Assistant', 'Heebo', 'system-ui', 'sans-serif'],
-                        heebo: ['Heebo', 'sans-serif'],
-                        mono: ['Fira Code', 'JetBrains Mono', 'monospace']
+                        heebo: ['Heebo', 'sans-serif']
                     }
                 }
             }
@@ -52,15 +51,15 @@
     <style>
         body {
             font-family: 'Assistant', 'Heebo', sans-serif;
-            background-color: #090A0D;
+            background-color: #0B0D11;
             color: #F4F4F0;
             overflow-x: hidden;
         }
 
-        /* Technical Dot Grid background */
-        .tactical-dots {
-            background-image: radial-gradient(#1C202B 1.2px, transparent 1.2px);
-            background-size: 24px 24px;
+        /* Technical Dot Grid - used very sparingly to convey a subtle tech atmosphere (30%) */
+        .subtle-dots {
+            background-image: radial-gradient(#1E222E 1.2px, transparent 1.2px);
+            background-size: 32px 32px;
         }
 
         /* Clean Scrollbar */
@@ -68,13 +67,14 @@
             width: 6px;
         }
         ::-webkit-scrollbar-track {
-            background: #090A0D;
+            background: #0B0D11;
         }
         ::-webkit-scrollbar-thumb {
-            background: #1C202B;
+            background: #1E222E;
+            border-radius: 3px;
         }
         ::-webkit-scrollbar-thumb:hover {
-            background: #F59E0B;
+            background: #F97316;
         }
     </style>
 
@@ -87,409 +87,121 @@
         gtag('config', 'G-XXXXXXXXXX');
     </script>
 </head>
-<body class="relative min-h-screen tactical-dots antialiased selection:bg-tactical-amber/20 selection:text-white">
+<body class="relative min-h-screen subtle-dots antialiased selection:bg-brand-orange/20 selection:text-white">
 
-    <!-- 1. Header (Structural Editorial Navbar) -->
-    <header class="sticky top-0 z-50 w-full bg-tactical-bg/90 backdrop-blur-md border-b border-tactical-border/70 transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between relative">
+    <!-- 1. Header -->
+    <header class="sticky top-0 z-50 w-full bg-brand-bg/95 backdrop-blur-md border-b border-brand-border/70 transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
             
-            <!-- Structural border decorators -->
-            <div class="absolute bottom-0 right-0 w-2 h-[1px] bg-tactical-amber"></div>
-            <div class="absolute bottom-0 left-0 w-2 h-[1px] bg-tactical-amber"></div>
-
-            <!-- Brand Identity -->
-            <a href="#" class="flex items-center gap-3 group focus:outline-none">
-                <!-- Precision Schematic Logo -->
-                <div class="relative flex items-center justify-center w-10 h-10 border border-tactical-border group-hover:border-tactical-amber transition-all duration-300 bg-tactical-card">
-                    <!-- Reticle style crosshair SVG -->
-                    <svg class="w-6 h-6 text-tactical-muted group-hover:text-tactical-amber transition-colors duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
-                        <circle cx="12" cy="12" r="8" />
-                        <path d="M12 2v20M2 12h20" stroke-dasharray="2 2" />
-                        <circle cx="12" cy="12" r="3" fill="currentColor" class="opacity-10 group-hover:opacity-30" />
-                    </svg>
-                    <!-- Corner ticks -->
-                    <span class="absolute top-0 right-0 w-1 h-[1px] bg-tactical-amber"></span>
-                    <span class="absolute bottom-0 left-0 w-1 h-[1px] bg-tactical-amber"></span>
-                </div>
-                
-                <div class="flex flex-col text-right">
-                    <span class="text-base font-extrabold text-white tracking-wide font-heebo leading-tight">מאור גבאי</span>
-                    <span class="text-[10px] font-mono text-tactical-muted tracking-tight">DFIR_INVESTIGATIONS_PORTAL // 2026</span>
-                </div>
+            <!-- Brand Name -->
+            <a href="#" class="flex items-center gap-2 group focus:outline-none">
+                <span class="text-base font-extrabold text-white tracking-wide font-heebo leading-tight">מאור גבאי | אבטחת מידע וחקירות דיגיטליות</span>
             </a>
 
-            <!-- Navigation Links (Desktop) -->
-            <nav class="hidden md:flex items-center gap-8 text-xs font-mono tracking-wider text-tactical-muted uppercase">
-                <a href="#why" class="hover:text-tactical-amber transition-colors duration-200">[ 01. למה אנחנו? ]</a>
-                <a href="#services" class="hover:text-tactical-amber transition-colors duration-200">[ 02. הפתרונות שלנו ]</a>
-                <a href="#testimonials" class="hover:text-tactical-amber transition-colors duration-200">[ 03. חוות דעת ]</a>
-                <a href="#about" class="hover:text-tactical-amber transition-colors duration-200">[ 04. קצת עלי ]</a>
-                <a href="#faq" class="hover:text-tactical-amber transition-colors duration-200">[ 05. שאלות נפוצות ]</a>
+            <!-- Navigation Links -->
+            <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-brand-textSecondary">
+                <a href="#services" class="hover:text-brand-orange transition-colors duration-200">השירות</a>
+                <a href="#how-it-works" class="hover:text-brand-orange transition-colors duration-200">איך זה עובד</a>
+                <a href="#about" class="hover:text-brand-orange transition-colors duration-200">עליי</a>
+                <a href="#faq" class="hover:text-brand-orange transition-colors duration-200">שאלות נפוצות</a>
+                <a href="#contact" class="hover:text-brand-orange transition-colors duration-200">יצירת קשר</a>
             </nav>
 
-            <!-- Navbar CTA Button -->
+            <!-- Header CTA Button -->
             <div class="flex items-center gap-4">
-                <a href="#contact" class="hidden sm:inline-flex items-center justify-center px-4 h-10 text-xs font-mono font-bold text-tactical-bg bg-tactical-amber hover:bg-amber-500 active:scale-95 transition-all duration-200 border border-tactical-amber">
-                    ייעוץ בטחוני חינם
+                <a href="#contact" class="hidden sm:inline-flex items-center justify-center px-4 h-10 text-xs font-bold text-white bg-brand-orange hover:bg-brand-orangeHover transition-all duration-200 rounded">
+                    שיחת היכרות ללא התחייבות
                 </a>
                 
                 <!-- Mobile Menu Button -->
-                <button id="mobile-menu-btn" class="md:hidden flex items-center justify-center w-10 h-10 text-tactical-muted hover:text-white border border-tactical-border bg-tactical-card focus:outline-none" aria-label="תפריט">
+                <button id="mobile-menu-btn" class="md:hidden flex items-center justify-center w-10 h-10 text-brand-textSecondary hover:text-white border border-brand-border bg-brand-card rounded focus:outline-none" aria-label="תפריט">
                     <svg id="menu-icon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 9h16.5m-16.5 6.75h16.5"/></svg>
                 </button>
             </div>
         </div>
 
         <!-- Mobile Navigation Menu -->
-        <div id="mobile-menu" class="hidden md:hidden w-full bg-tactical-bg border-b border-tactical-border px-4 py-4 space-y-2 absolute top-20 right-0 left-0 transition-all duration-300 z-40 shadow-xl">
-            <a href="#why" class="block py-2.5 px-4 text-xs font-mono text-tactical-muted hover:text-tactical-amber hover:bg-tactical-card rounded transition-colors">[ 01. למה אנחנו? ]</a>
-            <a href="#services" class="block py-2.5 px-4 text-xs font-mono text-tactical-muted hover:text-tactical-amber hover:bg-tactical-card rounded transition-colors">[ 02. הפתרונות שלנו ]</a>
-            <a href="#testimonials" class="block py-2.5 px-4 text-xs font-mono text-tactical-muted hover:text-tactical-amber hover:bg-tactical-card rounded transition-colors">[ 03. חוות דעת ]</a>
-            <a href="#about" class="block py-2.5 px-4 text-xs font-mono text-tactical-muted hover:text-tactical-amber hover:bg-tactical-card rounded transition-colors">[ 04. קצת עלי ]</a>
-            <a href="#faq" class="block py-2.5 px-4 text-xs font-mono text-tactical-muted hover:text-tactical-amber hover:bg-tactical-card rounded transition-colors">[ 05. שאלות נפוצות ]</a>
+        <div id="mobile-menu" class="hidden md:hidden w-full bg-brand-bg border-b border-brand-border px-4 py-4 space-y-2 absolute top-20 right-0 left-0 transition-all duration-300 z-40 shadow-xl">
+            <a href="#services" class="block py-2.5 px-4 text-sm text-brand-textSecondary hover:text-brand-orange hover:bg-brand-card rounded transition-colors">השירות</a>
+            <a href="#how-it-works" class="block py-2.5 px-4 text-sm text-brand-textSecondary hover:text-brand-orange hover:bg-brand-card rounded transition-colors">איך זה עובד</a>
+            <a href="#about" class="block py-2.5 px-4 text-sm text-brand-textSecondary hover:text-brand-orange hover:bg-brand-card rounded transition-colors">עליי</a>
+            <a href="#faq" class="block py-2.5 px-4 text-sm text-brand-textSecondary hover:text-brand-orange hover:bg-brand-card rounded transition-colors">שאלות נפוצות</a>
+            <a href="#contact" class="block py-2.5 px-4 text-sm text-brand-textSecondary hover:text-brand-orange hover:bg-brand-card rounded transition-colors">יצירת קשר</a>
             <div class="pt-2">
-                <a href="#contact" class="block text-center py-3 px-4 text-xs font-mono font-bold text-tactical-bg bg-tactical-amber hover:bg-amber-500 rounded">
-                    ייעוץ בטחוני חינם
+                <a href="#contact" class="block text-center py-2.5 px-4 text-xs font-bold text-white bg-brand-orange hover:bg-brand-orangeHover rounded">
+                    שיחת היכרות ללא התחייבות
                 </a>
             </div>
         </div>
     </header>
 
-    <!-- 2. Hero Section (Tactical Editorial Briefing) -->
-    <section class="relative z-10 pt-16 pb-20 md:py-28 overflow-hidden border-b border-tactical-border/55">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- 2. Hero Section (Simplified, Clean Visual Balance) -->
+    <section class="relative z-10 pt-12 pb-16 md:py-24 overflow-hidden border-b border-brand-border/60">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 
                 <!-- Hero Content -->
-                <div class="lg:col-span-7 space-y-6 text-right order-1 lg:order-1">
+                <div class="lg:col-span-7 space-y-6 text-right order-1">
                     
-                    <!-- Metadata Header Tags -->
-                    <div class="flex flex-wrap items-center gap-2 text-[10px] font-mono text-tactical-amber tracking-wider uppercase">
-                        <span class="px-2 py-0.5 border border-tactical-amber/30 bg-tactical-amber/5">[ SEC_STATUS: ACTIVE ]</span>
-                        <span class="px-2 py-0.5 border border-tactical-border bg-tactical-card text-tactical-muted">[ DEPLOYMENT_NODE: DFIR_TLV ]</span>
+                    <!-- Factual Trust Points Grid -->
+                    <div class="flex flex-wrap gap-3 text-xs text-brand-orange font-medium">
+                        <span class="px-2.5 py-1 bg-brand-card border border-brand-border rounded flex items-center gap-1.5">
+                            <span class="w-1.5 h-1.5 rounded-full bg-brand-orange"></span>
+                            שירות אישי ומקצועי
+                        </span>
+                        <span class="px-2.5 py-1 bg-brand-card border border-brand-border rounded flex items-center gap-1.5">
+                            <span class="w-1.5 h-1.5 rounded-full bg-brand-orange"></span>
+                            עבודה דיסקרטית
+                        </span>
+                        <span class="px-2.5 py-1 bg-brand-card border border-brand-border rounded flex items-center gap-1.5">
+                            <span class="w-1.5 h-1.5 rounded-full bg-brand-orange"></span>
+                            הסברים בשפה ברורה
+                        </span>
                     </div>
 
-                    <!-- Main Editorial Headline -->
-                    <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight font-heebo tracking-tight">
-                        בעל עסק? <br class="hidden sm:inline">
-                        אם מחר בבוקר לא היית יכול להיכנס לאימייל או לפתוח את הקבצים, למי היית מתקשר?
+                    <!-- Main Heading -->
+                    <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white leading-tight font-heebo tracking-tight">
+                        בעל עסק? מה יקרה אם מחר בבוקר תגלה שהאקר נמצא בתוך הרשת שלך?
                     </h1>
 
-                    <!-- Technical Subheadline -->
-                    <p class="text-base sm:text-lg text-tactical-muted max-w-2xl font-light leading-relaxed">
-                        האקרים לא מחפשים רק תאגידי ענק עם מיליארדים בקופה. עסקים קטנים ובינוניים הם המטרה הקלה, המהירה והמועדפת עליהם. בוא נבצר את מפעל החיים שלך ונקדים אותם.
+                    <!-- Supporting Text -->
+                    <p class="text-base sm:text-lg text-brand-textSecondary max-w-2xl font-light leading-relaxed">
+                        מתקפת סייבר לא חייבת להיות מכוונת לחברה גדולה. גם עסק קטן עלול להיפגע מכופרה, מגניבת מידע או מתקיפה שמוחקת מידע חיוני.
                     </p>
 
-                    <!-- Tactical 1px Grid Bullet Lists -->
-                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-4 text-xs font-mono text-tactical-muted border-t border-tactical-border">
-                        <div class="flex items-center gap-2 py-1">
-                            <span class="text-tactical-amber">[✓]</span>
-                            <span>דיסקרטיות וסודיות מוחלטת</span>
-                        </div>
-                        <div class="flex items-center gap-2 py-1">
-                            <span class="text-tactical-amber">[✓]</span>
-                            <span>זמינות 24/7 לחירום סייבר</span>
-                        </div>
-                        <div class="flex items-center gap-2 py-1">
-                            <span class="text-tactical-amber">[✓]</span>
-                            <span>שירות בגובה העיניים</span>
-                        </div>
-                    </div>
-
-                    <!-- Direct Response CTA Actions -->
-                    <div class="flex flex-col sm:flex-row gap-4 pt-4">
-                        <a href="#contact" class="inline-flex items-center justify-center gap-2 px-8 h-12 text-sm font-mono font-bold text-tactical-bg bg-tactical-amber hover:bg-amber-500 active:scale-95 transition-all duration-200 border border-tactical-amber">
-                            <span>בוא נגן על העסק שלי עכשיו</span>
+                    <!-- CTAs above the fold -->
+                    <div class="flex flex-col sm:flex-row gap-4 pt-2">
+                        <a href="#contact" class="inline-flex items-center justify-center gap-2 px-6 h-12 text-sm font-bold text-white bg-brand-orange hover:bg-brand-orangeHover active:scale-95 transition-all duration-200 rounded shadow-md cursor-pointer">
+                            <span>בואו נבדוק את מצב האבטחה בעסק</span>
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
                         </a>
                         
-                        <a href="https://wa.me/972509798704?text=%D7%A9%D7%9C%D7%95%D7%9D%20%D7%9E%D7%90%D7%95%D7%A8%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%9E%D7%94%D7%90%D7%AA%D7%A8%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A4%D7%A8%D7%98%D7%99%D7%9D%20%D7%A2%D7%9C%20%D7%90%D7%91%D7%98%D7%97%D7%AA%20%D7%94%D7%A2%D7%A1%D7%A7%20%D7%A9%D7%9C%D7%99." target="_blank" class="inline-flex items-center justify-center gap-2 px-8 h-12 text-sm font-mono font-bold text-white border border-tactical-border hover:border-tactical-amber hover:bg-tactical-card transition-all duration-200">
-                            <!-- WhatsApp Icon Minimal SVG -->
-                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.504-5.711-1.465L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.963C16.388 2.025 13.91 1 11.3 1 6.131 1 1.922 5.161 1.919 10.3c-.001 1.702.447 3.366 1.301 4.848l-.427 1.56 1.597-.414zM17.65 19.3c.094-.15.485-.708.579-.858.093-.15-.094-.325-.281-.413s-1.124-.554-1.218-.591-.187-.038-.281.094-.375.469-.469.581-.187.113-.375.019a4.736 4.736 0 0 1-1.393-.859 5.228 5.228 0 0 1-1.012-1.261c-.113-.188-.012-.288.081-.381.085-.084.188-.225.281-.338.094-.112.125-.188.188-.313s.031-.244-.015-.338-.375-.901-.516-1.238c-.137-.329-.277-.281-.375-.281h-.32c-.113 0-.294.042-.449.213-.155.171-.592.578-.592 1.411s.607 1.636.691 1.749c.084.113 1.194 1.823 2.894 2.553.404.174.72.277.965.354.406.129.776.111 1.069.067.327-.049 1.006-.411 1.147-.809z"/></svg>
-                            <span>שיחת ווטסאפ ישירה</span>
+                        <a href="https://wa.me/972509798704?text=%D7%A9%D7%9C%D7%95%D7%9D%20%D7%9E%D7%90%D7%95%D7%A8%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%9E%D7%94%D7%90%D7%AA%D7%A8%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A4%D7%A8%D7%98%D7%99%D7%9D%20%D7%A2%D7%9C%20%D7%90%D7%91%D7%98%D7%97%D7%AA%20%D7%94%D7%A2%D7%A1%D7%A7%20%D7%A9%D7%9C%D7%99." target="_blank" class="inline-flex items-center justify-center gap-2 px-6 h-12 text-sm font-bold text-brand-textPrimary border border-brand-border bg-brand-card hover:border-brand-orange hover:bg-brand-card/85 transition-all duration-200 rounded">
+                            <!-- WhatsApp Icon Minimal -->
+                            <svg class="w-4 h-4 fill-current text-green-500" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.504-5.711-1.465L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.963C16.388 2.025 13.91 1 11.3 1 6.131 1 1.922 5.161 1.919 10.3c-.001 1.702.447 3.366 1.301 4.848l-.427 1.56 1.597-.414zM17.65 19.3c.094-.15.485-.708.579-.858.093-.15-.094-.325-.281-.413s-1.124-.554-1.218-.591-.187-.038-.281.094-.375.469-.469.581-.187.113-.375.019a4.736 4.736 0 0 1-1.393-.859 5.228 5.228 0 0 1-1.012-1.261c-.113-.188-.012-.288.081-.381.085-.084.188-.225.281-.338.094-.112.125-.188.188-.313s.031-.244-.015-.338-.375-.901-.516-1.238c-.137-.329-.277-.281-.375-.281h-.32c-.113 0-.294.042-.449.213-.155.171-.592.578-.592 1.411s.607 1.636.691 1.749c.084.113 1.194 1.823 2.894 2.553.404.174.72.277.965.354.406.129.776.111 1.069.067.327-.049 1.006-.411 1.147-.809z"/></svg>
+                            <span>שליחת הודעה בוואטסאפ</span>
                         </a>
                     </div>
                 </div>
 
-                <!-- Schematic Wireframe Visual element (Left Column) -->
-                <div class="lg:col-span-5 relative flex justify-center items-center order-2 lg:order-2">
-                    <div class="relative w-full max-w-sm sm:max-w-md bg-tactical-card border border-tactical-border flex flex-col justify-between p-6 sm:p-8 overflow-hidden">
+                <!-- Simplified static shield/illustration (30% cyber atmosphere) -->
+                <div class="lg:col-span-5 relative flex justify-center items-center order-2">
+                    <div class="relative w-full max-w-xs sm:max-w-sm h-64 sm:h-80 border border-brand-border bg-brand-card flex flex-col justify-center items-center p-8 rounded shadow-md overflow-hidden">
                         
-                        <!-- Grid crosshairs -->
-                        <span class="absolute top-0 right-0 w-2 h-2 border-t border-r border-tactical-border/80"></span>
-                        <span class="absolute top-0 left-0 w-2 h-2 border-t border-l border-tactical-border/80"></span>
-                        <span class="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-tactical-border/80"></span>
-                        <span class="absolute bottom-0 left-0 w-2 h-2 border-b border-l border-tactical-border/80"></span>
-                        
-                        <!-- Header with Terminal Prompt -->
-                        <div class="flex items-center justify-between border-b border-tactical-border pb-4">
-                            <span class="text-[10px] font-mono text-tactical-amber flex items-center gap-1.5">
-                                <span class="w-1.5 h-1.5 bg-tactical-amber animate-pulse"></span>
-                                [ MONITOR: ACTIVE ]
-                            </span>
-                            <span class="text-[9px] font-mono text-tactical-muted">SYS_BUILD_VER: 2.11.09</span>
-                        </div>
-
-                        <!-- Central Scientific Reticle -->
-                        <div class="flex flex-col items-center justify-center py-10 space-y-4">
-                            <div class="relative w-24 h-24 border border-tactical-border rounded-full flex items-center justify-center">
-                                <!-- Outer schematic ticks -->
-                                <span class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1 w-[1px] h-2 bg-tactical-border"></span>
-                                <span class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1 w-[1px] h-2 bg-tactical-border"></span>
-                                <span class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1 w-2 h-[1px] bg-tactical-border"></span>
-                                <span class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1 w-2 h-[1px] bg-tactical-border"></span>
-                                
-                                <div class="w-16 h-16 border border-dashed border-tactical-border rounded-full flex items-center justify-center animate-[spin_40s_linear_infinite]"></div>
-                                <!-- Minimal central lock schematic -->
-                                <div class="absolute text-tactical-amber">
-                                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
-                                </div>
-                            </div>
-                            <div class="text-center font-mono">
-                                <span class="text-xs font-bold tracking-wider text-tactical-amber block">[ SYSTEM_SHIELD: ARMED ]</span>
-                                <p class="text-[9px] text-tactical-muted mt-1">REAL-TIME FORENSICS THREAT DETECTED</p>
-                            </div>
-                        </div>
-
-                        <!-- Simulated System Data Table -->
-                        <div class="border-t border-tactical-border pt-4 text-[9px] font-mono text-tactical-muted">
-                            <div class="flex justify-between py-1 border-b border-tactical-border/40">
-                                <span>THREAT_LEVEL:</span>
-                                <span class="text-red-500 font-bold">WARNING_ALERT</span>
-                            </div>
-                            <div class="flex justify-between py-1">
-                                <span>SEC_NODE_STATUS:</span>
-                                <span class="text-tactical-amber font-bold">ACTIVE_GUARDED</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- 3. The Problem & Stats (Scientific Analytical Report) -->
-    <section id="why" class="relative z-10 py-20 bg-tactical-card/35 border-b border-tactical-border/55">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            
-            <!-- Section Header -->
-            <div class="text-right max-w-3xl space-y-2">
-                <span class="text-tactical-amber text-xs font-mono tracking-wider">[ SEC_RECON_REPORT // 01 ]</span>
-                <h2 class="text-2xl sm:text-3xl font-extrabold text-white font-heebo tracking-tight">סייבר בעסקים קטנים: המציאות מול המיתוס</h2>
-                <p class="text-tactical-muted text-xs sm:text-sm font-light">סקירת נתוני החשיפה והסיכון הפיננסי למגזר העסקי הקטן והבינוני בישראל.</p>
-                <div class="w-12 h-[1px] bg-tactical-amber mt-3"></div>
-            </div>
-
-            <!-- Stats Structural Row Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-3 mt-16 border-t border-r border-tactical-border">
-                
-                <!-- Stat Card 1 -->
-                <div class="bg-tactical-card/45 border-l border-b border-tactical-border p-8 text-right group relative">
-                    <!-- Tech ID tag -->
-                    <span class="text-[9px] font-mono text-tactical-muted absolute top-4 left-6">[ STAT_NODE: 01A ]</span>
-                    
-                    <span class="text-5xl font-black text-tactical-amber font-mono block mt-2">5% - 6%</span>
-                    <span class="text-sm font-bold text-white mt-3 block font-heebo">מהעסקים מותקפים בשנה</span>
-                    <p class="text-xs text-tactical-muted mt-3 font-light leading-relaxed">
-                        לפי סקרים של הסוכנות לעסקים קטנים ובינוניים, כ-5%-6% מהעסקים חווים או נחשפים לתקיפת סייבר בשנה. המשמעות היא עשרות אלפי עסקים בשנה במגזר העסקי בישראל.
-                    </p>
-                </div>
-
-                <!-- Stat Card 2 -->
-                <div class="bg-tactical-card/45 border-l border-b border-tactical-border p-8 text-right group relative">
-                    <!-- Tech ID tag -->
-                    <span class="text-[9px] font-mono text-tactical-muted absolute top-4 left-6">[ STAT_NODE: 02B ]</span>
-                    
-                    <span class="text-5xl font-black text-tactical-amber font-mono block mt-2">כ-20%</span>
-                    <span class="text-sm font-bold text-white mt-3 block font-heebo">מדווחים על נזק קשה</span>
-                    <p class="text-xs text-tactical-muted mt-3 font-light leading-relaxed">
-                        מתוך העסקים שהותקפו, כ-20% מדווחים כי נגרם להם נזק קשה או משמעותי לפעילות העסקית ולעבודה השוטפת שלהם, המוביל לעתים לקריסה.
-                    </p>
-                </div>
-
-                <!-- Stat Card 3 -->
-                <div class="bg-tactical-card/45 border-l border-b border-tactical-border p-8 text-right group relative">
-                    <!-- Tech ID tag -->
-                    <span class="text-[9px] font-mono text-tactical-muted absolute top-4 left-6">[ STAT_NODE: 03C ]</span>
-                    
-                    <span class="text-5xl font-black text-tactical-amber font-mono block mt-2">מצב לאומי</span>
-                    <span class="text-sm font-bold text-white mt-3 block font-heebo">ישראל היא יעד מרכזי בעולם</span>
-                    <p class="text-xs text-tactical-muted mt-3 font-light leading-relaxed">
-                        ישראל היא מהמדינות המותקפות ביותר בעולם בסייבר, עם זינוק חד במתקפות כמו DDoS (מניעת שירות) והתרעות שוטפות חמות מטעם מערך הסייבר הלאומי.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Focus on Loss Table Layout -->
-            <div class="mt-20 border border-tactical-border bg-tactical-card/10">
-                
-                <div class="p-4 sm:p-6 border-b border-tactical-border bg-tactical-card flex items-center justify-between">
-                    <h3 class="text-sm sm:text-base font-bold text-white font-mono uppercase tracking-wide">
-                        [ נזקים פוטנציאליים קריטיים לעסק שלך ]
-                    </h3>
-                    <span class="text-[10px] font-mono text-red-500 font-bold">[ CRITICAL_EXPOSURES ]</span>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x md:divide-x-reverse divide-tactical-border">
-                    <!-- Exposure Item 1 -->
-                    <div class="p-6 sm:p-8 space-y-3">
-                        <div class="flex items-center gap-2">
-                            <span class="text-red-500 font-mono text-xs">[01]</span>
-                            <h4 class="text-sm sm:text-base font-bold text-white font-heebo">יומן פגישות חסום ומערכת קביעת תורים</h4>
-                        </div>
-                        <p class="text-xs text-tactical-muted font-light leading-relaxed">
-                            החיים והפרנסה שלכם תלויים ביומן. חסימה שלו עקב נעילה או כופר משמעותה איבוד לקוחות, ביטול ימי עבודה ועצירת הכנסה מיידית.
-                        </p>
-                    </div>
-
-                    <!-- Exposure Item 2 -->
-                    <div class="p-6 sm:p-8 space-y-3">
-                        <div class="flex items-center gap-2">
-                            <span class="text-red-500 font-mono text-xs">[02]</span>
-                            <h4 class="text-sm sm:text-base font-bold text-white font-heebo">מאגרי תמונות, קבצים ומידע רגיש של לקוחות</h4>
-                        </div>
-                        <p class="text-xs text-tactical-muted font-light leading-relaxed">
-                            צלמים, קליניקות ומטפלים שמחזיקים תמונות או מידע רפואי/אישי. מחיקה או הפצה של קבצים אלו היא מכה אנושה למוניטין ותביעה משפטית כמעט בטוחה.
-                        </p>
-                    </div>
-
-                    <!-- Exposure Item 3 -->
-                    <div class="p-6 sm:p-8 space-y-3">
-                        <div class="flex items-center gap-2">
-                            <span class="text-red-500 font-mono text-xs">[03]</span>
-                            <h4 class="text-sm sm:text-base font-bold text-white font-heebo">חשבוניות, דוחות ומערכות הנהלת חשבונות</h4>
-                        </div>
-                        <p class="text-xs text-tactical-muted font-light leading-relaxed">
-                            שיתוק של מערכת הנהלת החשבונות גורם לעצירת גביית כספים, חוסר יכולת לשלם לספקים, ואובדן שליטה פיננסית מוחלטת על העסק.
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-    </section>
-
-    <!-- 4. The Solution & Services Matrix -->
-    <section id="services" class="relative z-10 py-20 border-b border-tactical-border/55">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            
-            <!-- Section Header -->
-            <div class="text-right max-w-3xl space-y-2">
-                <span class="text-tactical-amber text-xs font-mono tracking-wider">[ DEFENSE_STRATEGY // 02 ]</span>
-                <h2 class="text-2xl sm:text-3xl font-extrabold text-white font-heebo tracking-tight">מעטפת הגנת הסייבר המקיפה של מאור גבאי</h2>
-                <p class="text-tactical-muted text-xs sm:text-sm font-light">הכלים הטכנולוגיים שחברות ענק משתמשות בהם, מותאמים אישית ובגובה העיניים לצרכי עסק קטן.</p>
-                <div class="w-12 h-[1px] bg-tactical-amber mt-3"></div>
-            </div>
-
-            <!-- Services Grid with Technical 1px structural framing -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-16 border-t border-r border-tactical-border">
-                
-                <!-- Service 1 -->
-                <div class="bg-tactical-card/35 border-l border-b border-tactical-border p-8 flex flex-col justify-between group relative">
-                    <span class="text-[9px] font-mono text-tactical-amber absolute top-4 left-6">[ PROTOCOL: POSTURE_CHECK ]</span>
-                    <div class="space-y-4">
-                        <!-- High Precision Wireframe SVG Icon -->
-                        <div class="w-10 h-10 border border-tactical-border flex items-center justify-center bg-tactical-bg text-tactical-amber">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.2">
-                                <rect x='3' y='3' width='18' height='18' rx='1' />
-                                <path d='M9 17h6M9 13h6M9 9h3' />
-                            </svg>
-                        </div>
-                        <h3 class="text-base sm:text-lg font-bold text-white font-heebo">הערכת חוסן ואבטחה מקיפה</h3>
-                        <p class="text-xs text-tactical-muted font-light leading-relaxed">
-                            נבצע סריקה ובדיקה מלאה של המחשבים במשרד, תיבות האימייל של העובדים, שירותי הענן, הרשאות המערכת והגישה מרחוק. נאתר את חורי האבטחה הקריטיים לפני שהאקרים ימצאו אותם.
-                        </p>
-                    </div>
-                    <div class="border-t border-tactical-border/60 pt-4 mt-6">
-                        <span class="text-[9px] font-mono text-tactical-muted block">AUDIT // THREAT_MODELING</span>
-                    </div>
-                </div>
-
-                <!-- Service 2 -->
-                <div class="bg-tactical-card/35 border-l border-b border-tactical-border p-8 flex flex-col justify-between group relative">
-                    <span class="text-[9px] font-mono text-tactical-amber absolute top-4 left-6">[ PROTOCOL: TACTICAL_PLAN ]</span>
-                    <div class="space-y-4">
-                        <!-- High Precision Wireframe SVG Icon -->
-                        <div class="w-10 h-10 border border-tactical-border flex items-center justify-center bg-tactical-bg text-tactical-amber">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.2">
-                                <path d='M4 6h16M4 12h16M4 18h10' />
-                                <circle cx='18' cy='18' r='2' />
-                            </svg>
-                        </div>
-                        <h3 class="text-base sm:text-lg font-bold text-white font-heebo">דוח ממצאים ותוכנית פעולה ברורה</h3>
-                        <p class="text-xs text-tactical-muted font-light leading-relaxed">
-                            תקבלו דוח נקי בעברית פשוטה שמסביר בדיוק מה מצאנו. בלי מונחים טכניים מורכבים וג'יבריש. הדוח יציג תוכנית פעולה ממוקדת: מה לתקן דחוף כבר היום, מה לשפר בהמשך ומה מתאים בדיוק לתקציב של עסק קטן.
-                        </p>
-                    </div>
-                    <div class="border-t border-tactical-border/60 pt-4 mt-6">
-                        <span class="text-[9px] font-mono text-tactical-muted block">DELIVERABLE // BLUEPRINT_REMEDY</span>
-                    </div>
-                </div>
-
-                <!-- Service 3 -->
-                <div class="bg-tactical-card/35 border-l border-b border-tactical-border p-8 flex flex-col justify-between group relative">
-                    <span class="text-[9px] font-mono text-tactical-amber absolute top-4 left-6">[ PROTOCOL: QUARTERLY_SYNC ]</span>
-                    <div class="space-y-4">
-                        <!-- High Precision Wireframe SVG Icon -->
-                        <div class="w-10 h-10 border border-tactical-border flex items-center justify-center bg-tactical-bg text-tactical-amber">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.2">
-                                <path d='M12 8v4l3 3M12 21a9 9 0 100-18 9 9 0 000 18z' />
-                            </svg>
-                        </div>
-                        <h3 class="text-base sm:text-lg font-bold text-white font-heebo">פגישות בקרה ומעקב רבעוניות</h3>
-                        <p class="text-xs text-tactical-muted font-light leading-relaxed">
-                            עולם איומי הסייבר משתנה בקצב מהיר מאוד. פעם ברבעון נקיים פגישת בקרה קצרה כדי לוודא שכל המלצות האבטחה יושמו בהצלחה, לבדוק מערכות חדשות שהכנסתם לעסק, ולוודא שמערך ההגנה שלכם מעודכן מול איומים חדשים.
-                        </p>
-                    </div>
-                    <div class="border-t border-tactical-border/60 pt-4 mt-6">
-                        <span class="text-[9px] font-mono text-tactical-muted block">SYNC // LIFECYCLE_GUARD</span>
-                    </div>
-                </div>
-
-                <!-- Service 4 -->
-                <div class="bg-tactical-card/35 border-l border-b border-tactical-border p-8 flex flex-col justify-between group relative">
-                    <span class="text-[9px] font-mono text-tactical-amber absolute top-4 left-6">[ PROTOCOL: DISASTER_READY ]</span>
-                    <div class="space-y-4">
-                        <!-- High Precision Wireframe SVG Icon -->
-                        <div class="w-10 h-10 border border-tactical-border flex items-center justify-center bg-tactical-bg text-tactical-amber">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.2">
-                                <circle cx='12' cy='12' r='8' />
-                                <path d='M12 7v6M12 17h.01' />
-                            </svg>
-                        </div>
-                        <h3 class="text-base sm:text-lg font-bold text-white font-heebo">תוכנית חירום לתגובה מהירה</h3>
-                        <p class="text-xs text-tactical-muted font-light leading-relaxed">
-                            נגדיר יחד מדריך חירום ברור ופשוט לעסק שלך: מי מתקשר למי, אילו מערכות מנתקים מיידית ואיך לפעול בדקות הראשונות של פריצה. תגובה נכונה ומהירה מונעת 90% מהנזק הפוטנציאלי ושומרת על המידע שלכם מוגן.
-                        </p>
-                    </div>
-                    <div class="border-t border-tactical-border/60 pt-4 mt-6">
-                        <span class="text-[9px] font-mono text-tactical-muted block">PLAYBOOK // DISASTER_RESPONSE</span>
-                    </div>
-                </div>
-
-                <!-- Service 5 (Spanning Card) -->
-                <div class="bg-tactical-card border-l border-b border-tactical-amber/30 p-8 flex flex-col justify-between group relative md:col-span-2">
-                    <span class="text-[9px] font-mono text-tactical-amber absolute top-4 left-6">[ PROTOCOL: DFIR_RETAINER ]</span>
-                    <div class="space-y-4">
-                        <div class="flex items-center gap-3">
-                            <!-- High Precision Wireframe SVG Icon -->
-                            <div class="w-10 h-10 border border-tactical-border flex items-center justify-center bg-tactical-bg text-tactical-amber">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.2">
-                                    <path d='M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z' stroke-linecap='round' />
+                        <!-- Static, clean cybersecurity graphics without active feeds -->
+                        <div class="relative w-28 h-28 border border-brand-border rounded-full flex items-center justify-center bg-brand-bg/50">
+                            <!-- Inner static circle and lock -->
+                            <div class="w-20 h-20 border border-brand-border rounded-full flex items-center justify-center">
+                                <svg class="w-10 h-10 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.745 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" />
                                 </svg>
                             </div>
-                            <span class="px-2 py-0.5 border border-tactical-amber text-tactical-amber text-[9px] font-mono">[ הטבה בלעדית בחבילה השנתית ]</span>
                         </div>
-                        <h3 class="text-base sm:text-lg font-bold text-white font-heebo">4 שעות חקירה ותגובה לאירוע (DFIR) כלולות בשירות</h3>
-                        <p class="text-xs text-tactical-muted font-light leading-relaxed">
-                            השקט הנפשי האולטימטיבי שלך. אם חלילה קורה משהו חריג, אתם לא לבד. החבילה השנתית כוללת 4 שעות עבודה של חוקר סייבר מומחה (Incident Response) שיגיע לבלום את הפריצה באופן מיידי, יחקור את מקור הנזק ויחזיר את העסק לפעילות תקינה ללא עלות נוספת (בשווי אלפי שקלים).
-                        </p>
-                    </div>
-                    <div class="border-t border-tactical-border pt-4 mt-6 flex justify-between items-center text-[10px] font-mono">
-                        <span class="text-tactical-amber block">[ INCIDENT_RESPONSE_INCLUDED ]</span>
-                        <span class="text-tactical-muted">שווי ההטבה: כ-2,800 ₪</span>
+
+                        <div class="text-center mt-6">
+                            <span class="text-xs font-mono tracking-wider text-brand-orange block uppercase font-semibold">אבטחת מידע וניהול סיכונים</span>
+                            <p class="text-xs text-brand-textSecondary mt-2 max-w-[200px] leading-relaxed mx-auto">מעטפת הגנה אישית לעסקים קטנים ובינוניים</p>
+                        </div>
                     </div>
                 </div>
 
@@ -497,159 +209,242 @@
         </div>
     </section>
 
-    <!-- 5. Social Proof (Intelligence De-briefings) -->
-    <section id="testimonials" class="relative z-10 py-20 bg-tactical-card/15 border-b border-tactical-border/55">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- 3. Potential Business Impact (Clear and Approachable Service) -->
+    <section class="relative z-10 py-16 border-b border-brand-border/60">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-right space-y-6">
+            
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-white font-heebo tracking-tight">
+                כשמידע ננעל, גם העסק עלול להיעצר
+            </h2>
+            <div class="w-12 h-[1px] bg-brand-orange"></div>
+            
+            <p class="text-base sm:text-lg text-brand-textPrimary font-light leading-relaxed max-w-3xl">
+                התוצאה עלולה להיות השבתת הפעילות, אובדן מסמכים, דליפת פרטי לקוחות, דרישת כופר ופגיעה באמון שנבנה מול הלקוחות. השירות שלי עוזר לך להבין מה מוגן, היכן קיימים פערים ומה עושים במקרה חירום. היערכות נכונה יכולה לצמצם את הנזק, לקצר את זמן ההתאוששות ולעזור לעסק לחזור לפעילות מהר יותר.
+            </p>
+        </div>
+    </section>
+
+    <!-- 4. Statistic Section (Only One Verified Stat) -->
+    <section class="relative z-10 py-12 bg-brand-card/25 border-b border-brand-border/60">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+                
+                <!-- Stat display -->
+                <div class="flex-shrink-0 text-center md:text-right border-l-0 md:border-l border-brand-border pl-0 md:pl-12 pb-4 md:pb-0">
+                    <span class="text-5xl sm:text-6xl font-black text-brand-orange font-mono block">1 מכל 10</span>
+                </div>
+                
+                <!-- Text & Link -->
+                <div class="text-right space-y-3 max-w-xl">
+                    <p class="text-sm sm:text-base text-brand-textPrimary leading-relaxed">
+                        לפי סקר הסוכנות לעסקים קטנים ובינוניים לשנת 2024, אחד מכל עשרה עסקים בישראל המעסיקים 5 עד 19 עובדים דיווח שחווה מתקפת סייבר בשנה האחרונה.
+                    </p>
+                    <a href="https://www.sba.org.il/hb/PolicyAndInformation/Researches/Pages/sr79.aspx" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-mono font-bold text-brand-orange hover:underline uppercase">
+                        <span>לצפייה במקור</span>
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" /></svg>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Services Section (Exactly Four Service Cards of equal height) -->
+    <section id="services" class="relative z-10 py-16 border-b border-brand-border/60">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <!-- Section Header -->
-            <div class="text-right max-w-3xl space-y-2">
-                <span class="text-tactical-amber text-xs font-mono tracking-wider">[ CASE_FILES // 03 ]</span>
-                <h2 class="text-2xl sm:text-3xl font-extrabold text-white font-heebo tracking-tight">השקט הנפשי של הלקוחות שלי הוא ההצלחה שלי</h2>
-                <div class="w-12 h-[1px] bg-tactical-amber mt-3"></div>
+            <div class="text-right max-w-3xl space-y-3 mb-12">
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-white font-heebo tracking-tight">מה השירות כולל?</h2>
+                <p class="text-brand-textSecondary text-sm sm:text-base font-light">
+                    ליווי שנועד לעזור לך להבין מה מצב האבטחה בעסק, מה כדאי לשפר ואיך לפעול אם מתרחש אירוע.
+                </p>
+                <div class="w-12 h-[1px] bg-brand-orange mt-2"></div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
-                <!-- Testimonial 1 -->
-                <div class="bg-tactical-card border border-tactical-border p-8 flex flex-col justify-between relative">
-                    <!-- Brackets design decorator -->
-                    <span class="text-[9px] font-mono text-tactical-muted absolute top-4 left-6">[ REF_A ]</span>
-                    
+            <!-- Service Cards Row -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
+                
+                <!-- Card 1 -->
+                <div class="bg-brand-card border border-brand-border p-6 rounded flex flex-col justify-between hover:border-brand-orange/40 transition-colors duration-200">
                     <div class="space-y-4">
-                        <p class="text-xs sm:text-sm text-tactical-paper font-light leading-relaxed italic">
-                            "כשהיומן הדיגיטלי שלי ננעל עקב פריצה, הרגשתי חוסר אונים מוחלט. כל הסטודיו היה מושבת והפסדתי כסף בכל שעה. מאור הגיע במהירות, זיהה את הפריצה, החזיר לי את הגישה תוך זמן קצר וסידר לי אבטחה של אימות דו-שלבי בכל החשבונות. היום אני ישן בשקט ויודע שיש לי על מי לסמוך ברגע האמת."
+                        <div class="w-9 h-9 border border-brand-border bg-brand-bg text-brand-orange flex items-center justify-center rounded">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        </div>
+                        <h3 class="text-base font-bold text-white font-heebo">אבחון מצב אבטחת המידע בעסק</h3>
+                        <p class="text-xs sm:text-sm text-brand-textSecondary font-light leading-relaxed">
+                            בדיקה כללית של המחשבים, החשבונות, הגישה למידע, הגיבויים והמערכות החשובות לעסק, כדי להבין מה מוגן והיכן קיימים פערים.
                         </p>
-                    </div>
-
-                    <div class="flex items-center gap-4 border-t border-tactical-border pt-4 mt-6">
-                        <div class="w-10 h-10 border border-tactical-border flex items-center justify-center font-mono font-bold text-xs text-tactical-amber bg-tactical-bg">
-                            RA
-                        </div>
-                        <div class="text-right">
-                            <span class="text-xs font-bold text-white block">רפי אלקובי</span>
-                            <span class="text-[10px] text-tactical-muted">מעצב שיער ובעל סטודיו, תל אביב</span>
-                        </div>
                     </div>
                 </div>
 
-                <!-- Testimonial 2 -->
-                <div class="bg-tactical-card border border-tactical-border p-8 flex flex-col justify-between relative">
-                    <!-- Brackets design decorator -->
-                    <span class="text-[9px] font-mono text-tactical-muted absolute top-4 left-6">[ REF_B ]</span>
-                    
+                <!-- Card 2 -->
+                <div class="bg-brand-card border border-brand-border p-6 rounded flex flex-col justify-between hover:border-brand-orange/40 transition-colors duration-200">
                     <div class="space-y-4">
-                        <p class="text-xs sm:text-sm text-tactical-paper font-light leading-relaxed italic">
-                            "הפחד הכי גדול שלי בתור צלמת עצמאית היה שחלילה יימחקו או ייגנבו לי תמונות של לקוחות מהמחשב או מהענן. מאור עשה לי סדר מוחלט בכל האבטחה, הגדיר גיבויים אוטומטיים חסיני כופר במקביל והסביר לי בצורה פשוטה בדיוק איך להימנע מהודעות פישינג מתוחכמות. שירות מקצועי, אדיב ובגובה העיניים."
+                        <div class="w-9 h-9 border border-brand-border bg-brand-bg text-brand-orange flex items-center justify-center rounded">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.75 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" /></svg>
+                        </div>
+                        <h3 class="text-base font-bold text-white font-heebo">תוכנית מסודרת לשיפור ההגנה</h3>
+                        <p class="text-xs sm:text-sm text-brand-textSecondary font-light leading-relaxed">
+                            דוח ברור עם המלצות לפי סדר עדיפות: מה כדאי לתקן מיד, מה אפשר לשפר בהמשך ומה מתאים לצרכים ולתקציב של העסק.
                         </p>
-                    </div>
-
-                    <div class="flex items-center gap-4 border-t border-tactical-border pt-4 mt-6">
-                        <div class="w-10 h-10 border border-tactical-border flex items-center justify-center font-mono font-bold text-xs text-tactical-amber bg-tactical-bg">
-                            ML
-                        </div>
-                        <div class="text-right">
-                            <span class="text-xs font-bold text-white block">מיכל לוי</span>
-                            <span class="text-[10px] text-tactical-muted">צלמת אירועים ותדמית עצמאית</span>
-                        </div>
                     </div>
                 </div>
 
-                <!-- Testimonial 3 -->
-                <div class="bg-tactical-card border border-tactical-border p-8 flex flex-col justify-between relative">
-                    <!-- Brackets design decorator -->
-                    <span class="text-[9px] font-mono text-tactical-muted absolute top-4 left-6">[ REF_C ]</span>
-                    
+                <!-- Card 3 -->
+                <div class="bg-brand-card border border-brand-border p-6 rounded flex flex-col justify-between hover:border-brand-orange/40 transition-colors duration-200">
                     <div class="space-y-4">
-                        <p class="text-xs sm:text-sm text-tactical-paper font-light leading-relaxed italic">
-                            "אנחנו מחזיקים במידע רגיש ואישי מאוד של הלקוחות שלנו בסוכנות הביטוח. מאור ביצע אצלנו בדיקה מקיפה ומעמיקה של תיבות הדוא\"ל והמחשבים במשרד, חסם כמה פרצות אבטחה חמורות מאוד והעביר לכל הצוות הדרכת מודעות קצרה וסופר פרקטית. שירות שהוא חובה מוחלטת לכל עסק שמכבד את עצמו ורוצה לישון בשקט!"
+                        <div class="w-9 h-9 border border-brand-border bg-brand-bg text-brand-orange flex items-center justify-center rounded">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" /></svg>
+                        </div>
+                        <h3 class="text-base font-bold text-white font-heebo">ליווי ובדיקות תקופתיות</h3>
+                        <p class="text-xs sm:text-sm text-brand-textSecondary font-light leading-relaxed">
+                            מעקב אחר הטיפול בפערים ובדיקה תקופתית של שינויים בעסק, בחשבונות ובמערכות החשובות.
                         </p>
                     </div>
+                </div>
 
-                    <div class="flex items-center gap-4 border-t border-tactical-border pt-4 mt-6">
-                        <div class="w-10 h-10 border border-tactical-border flex items-center justify-center font-mono font-bold text-xs text-tactical-amber bg-tactical-bg">
-                            DS
+                <!-- Card 4 -->
+                <div class="bg-brand-card border border-brand-border p-6 rounded flex flex-col justify-between hover:border-brand-orange/40 transition-colors duration-200">
+                    <div class="space-y-4">
+                        <div class="w-9 h-9 border border-brand-border bg-brand-bg text-brand-orange flex items-center justify-center rounded">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
                         </div>
-                        <div class="text-right">
-                            <span class="text-xs font-bold text-white block">דורון שגיא</span>
-                            <span class="text-[10px] text-tactical-muted">סוכן ביטוח ובעל סוכנות משפחתית</span>
-                        </div>
+                        <h3 class="text-base font-bold text-white font-heebo">היערכות וטיפול באירועי סייבר</h3>
+                        <p class="text-xs sm:text-sm text-brand-textSecondary font-light leading-relaxed">
+                            הגדרת נוהל עבודה פשוט וברור למקרה של אירוע, כדי שכולם ידעו למי פונים ומה עושים בדקות הראשונות.
+                        </p>
                     </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. How the Service Works -->
+    <section id="how-it-works" class="relative z-10 py-16 bg-brand-card/15 border-b border-brand-border/60">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Section Header -->
+            <div class="text-right max-w-3xl space-y-2 mb-12">
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-white font-heebo tracking-tight">איך זה עובד?</h2>
+                <div class="w-12 h-[1px] bg-brand-orange mt-2"></div>
+            </div>
+
+            <!-- Steps Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <!-- Step 1 -->
+                <div class="p-6 border border-brand-border bg-brand-card rounded relative">
+                    <span class="text-3xl font-bold text-brand-orange/20 font-mono absolute top-4 left-6">01</span>
+                    <h3 class="text-base font-bold text-white mb-2 font-heebo">שיחת היכרות ראשונית</h3>
+                    <p class="text-xs sm:text-sm text-brand-textSecondary leading-relaxed font-light">
+                        נבין יחד מהן הפעילות העסקית המרכזית שלך, היכן שמור המידע הרגיש ומהם החששות החשובים לך ביותר.
+                    </p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="p-6 border border-brand-border bg-brand-card rounded relative">
+                    <span class="text-3xl font-bold text-brand-orange/20 font-mono absolute top-4 left-6">02</span>
+                    <h3 class="text-base font-bold text-white mb-2 font-heebo">אבחון ומיפוי פערים</h3>
+                    <p class="text-xs sm:text-sm text-brand-textSecondary leading-relaxed font-light">
+                        אני מבצע בדיקה יסודית של המחשבים, הרשאות החשבונות של העובדים, הגיבויים ומערכות הענן במשרד.
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="p-6 border border-brand-border bg-brand-card rounded relative">
+                    <span class="text-3xl font-bold text-brand-orange/20 font-mono absolute top-4 left-6">03</span>
+                    <h3 class="text-base font-bold text-white mb-2 font-heebo">הגשת דוח המלצות</h3>
+                    <p class="text-xs sm:text-sm text-brand-textSecondary leading-relaxed font-light">
+                        תקבל דוח קריא וברור בעברית פשוטה שמדרג את הפעולות הנדרשות לביצוע לפי סדר עדיפויות שתואם לתקציב שלך.
+                    </p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="p-6 border border-brand-border bg-brand-card rounded relative">
+                    <span class="text-3xl font-bold text-brand-orange/20 font-mono absolute top-4 left-6">04</span>
+                    <h3 class="text-base font-bold text-white mb-2 font-heebo">יישום וליווי תקופתי</h3>
+                    <p class="text-xs sm:text-sm text-brand-textSecondary leading-relaxed font-light">
+                        אני מלווה אותך ועובד בשיתוף פעולה מול איש המחשבים או ה-IT שלך כדי לוודא שכל הפערים נסגרים כראוי.
+                    </p>
                 </div>
             </div>
 
         </div>
     </section>
 
-    <!-- 6. Authority & About (Technical Dossier) -->
-    <section id="about" class="relative z-10 py-20 overflow-hidden border-b border-tactical-border/55">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- 7. DFIR Support Included (Factual and Restrained) -->
+    <section class="relative z-10 py-16 border-b border-brand-border/60">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-right space-y-6">
+            
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-white font-heebo tracking-tight">
+                היערכות וטיפול באירועי סייבר כלולות בשירות השנתי
+            </h2>
+            <div class="w-12 h-[1px] bg-brand-orange"></div>
+            
+            <div class="space-y-4 text-brand-textPrimary font-light text-sm sm:text-base leading-relaxed">
+                <p>
+                    אם עולה חשד לפריצה או לפגיעה במידע, ארבע שעות העבודה הראשונות מוקדשות להערכת המצב, לפעולות בלימה ראשוניות, לאיסוף ולניתוח מידע ולהכוונת ההתאוששות. היקף הטיפול תלוי בסוג האירוע ובמורכבותו.
+                </p>
+                <p class="font-bold text-brand-orange">
+                    המענה לאירועים ניתן בשעות הפעילות, בתיאום ובכפוף לזמינות.
+                </p>
+                <p class="text-xs text-brand-textSecondary">
+                    * ארבע השעות מהוות מכסה שנתית משותפת לכל האירועים ואינן מבטיחות השלמת חקירה או התאוששות מלאה במסגרת הזמן הזה.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. About Maor (Factual Dossier / Profile) -->
+    <section id="about" class="relative z-10 py-16 overflow-hidden border-b border-brand-border/60">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 
-                <!-- Schematic Dossier Box (Left Side) -->
-                <div class="lg:col-span-5 flex justify-center order-2 lg:order-1">
-                    <div class="relative w-full max-w-sm">
-                        <!-- Corner markings -->
-                        <div class="absolute inset-0 border border-tactical-border translate-x-3 translate-y-3 pointer-events-none"></div>
-                        <div class="relative bg-tactical-card border border-tactical-border p-6 sm:p-8 space-y-6">
+                <!-- Portrait Placeholder Frame (Left column visually in RTL) -->
+                <div class="lg:col-span-5 flex justify-center order-2">
+                    <div class="relative w-full max-w-xs sm:max-w-sm">
+                        <!-- Structural border -->
+                        <div class="absolute inset-0 border border-brand-border translate-x-2.5 translate-y-2.5 pointer-events-none rounded"></div>
+                        <div class="relative bg-brand-card border border-brand-border p-6 rounded flex flex-col items-center justify-center h-64 sm:h-80">
                             
-                            <!-- About Badge Info -->
-                            <div class="flex items-center gap-4">
-                                <div class="w-10 h-10 border border-tactical-border bg-tactical-bg text-tactical-amber flex items-center justify-center font-mono font-bold text-xs">
-                                    [M_G]
-                                </div>
-                                <div class="text-right">
-                                    <h4 class="text-sm font-bold text-white">מאור גבאי</h4>
-                                    <p class="text-[10px] font-mono text-tactical-muted">OPERATIONAL CODE_NAME: INVESTIGATOR</p>
-                                </div>
+                            <!-- Silhouette Graphic representing photo placeholder -->
+                            <div class="w-20 h-20 rounded-full border border-brand-border bg-brand-bg flex items-center justify-center text-brand-orange/60 mb-4">
+                                <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+                                </svg>
                             </div>
-
-                            <p class="text-xs text-tactical-muted font-light leading-relaxed">
-                                "בכל פעם שאני רואה פריצה לעסק קטן, כואב לי הלב מחדש. אלו לא תאגידים שיכולים לספוג הפסדים - זה הבית שלכם, זה הלחם של המשפחה. המטרה שלי היא לפשט עבורכם את עולם הסייבר ולהעניק לכם הגנה קריטית במחיר הגיוני ושפוי."
-                            </p>
-
-                            <!-- Minimal System Metrics Matrix -->
-                            <div class="border-t border-tactical-border pt-4 grid grid-cols-3 gap-2 text-center text-[10px] font-mono">
-                                <div>
-                                    <span class="text-tactical-amber font-bold block">DFIR_SEC</span>
-                                    <span class="text-[9px] text-tactical-muted">CORE // FORENSIC</span>
-                                </div>
-                                <div class="border-x border-tactical-border">
-                                    <span class="text-white font-bold block">ACTIVE</span>
-                                    <span class="text-[9px] text-tactical-muted">MONITORING</span>
-                                </div>
-                                <div>
-                                    <span class="text-tactical-amber font-bold block">SECURED</span>
-                                    <span class="text-[9px] text-tactical-muted">SHIELD // DEPLOY</span>
-                                </div>
-                            </div>
+                            
+                            <span class="text-xs font-mono text-brand-orange uppercase font-semibold">[ תמונת פורטרט ]</span>
+                            <span class="text-xs text-brand-textSecondary mt-2">מאור גבאי</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Text Content (Right column for RTL layout) -->
-                <div class="lg:col-span-7 space-y-6 text-right order-1 lg:order-2">
-                    <span class="text-tactical-amber text-xs font-mono tracking-wider">[ DOSSIER_PROFILE // 04 ]</span>
+                <!-- Text Content (Right column in RTL) -->
+                <div class="lg:col-span-7 space-y-6 text-right order-1">
+                    <span class="text-brand-orange text-xs font-mono tracking-wider">[ פרופיל מקצועי ]</span>
                     <h2 class="text-2xl sm:text-3xl font-extrabold text-white font-heebo tracking-tight">נעים להכיר, אני מאור גבאי</h2>
-                    <div class="w-12 h-[1px] bg-tactical-amber"></div>
+                    <div class="w-12 h-[1px] bg-brand-orange"></div>
                     
-                    <div class="space-y-4 text-tactical-muted font-light leading-relaxed text-xs sm:text-sm">
-                        <p>
-                            אני חוקר סייבר מומחה לתגובה לאירועים ופורנזיקה דיגיטלית (DFIR). לאחר שנים רבות של טיפול באירועי סייבר מורכבים, בלימת מתקפות כופר וביצוע חקירות דיגיטליות רגישות עבור ארגונים, הבנתי שהנפגעים העיקריים בשטח הם דווקא העסקים הקטנים והבינוניים בישראל.
-                        </p>
-                        <p>
-                            לעסקים קטנים אין תקציבי עתק של מיליוני שקלים, אין מחלקת IT פנימית של עשרות עובדים, והם לרוב לא מבינים את הטכנולוגיה המורכבת. מאידך, רמת האיומים, הודעות הפישינג המתוחכמות וניסיונות הפריצה אליהם רק עולים מדי יום.
-                        </p>
-                        <p class="font-bold text-white">
-                            העבודה איתי היא דיסקרטית לחלוטין, מקצועית ללא פשרות ובגובה העיניים.
-                        </p>
-                        <p>
-                            אתם לא צריכים להבין בסייבר, בשביל זה אני כאן. השקעה קטנה ופשוטה היום באבטחת המידע של העסק שלכם תחסוך לכם עשרות אלפי שקלים של נזקים, השבתת פעילות, ועגמת נפש אדירה מחר בבוקר.
-                        </p>
-                    </div>
+                    <p class="text-brand-textPrimary font-light leading-relaxed text-sm sm:text-base">
+                        אני מאור גבאי, חוקר סייבר ומהנדס זיהוי איומים, בעל ניסיון בטיפול באירועי סייבר ובחקירות דיגיטליות. אני מציע לעסקים קטנים ליווי אישי, דיסקרטי ומקצועי, בשפה ברורה ובשיתוף איש המחשבים של העסק, אם קיים.
+                    </p>
 
-                    <div class="pt-4">
-                        <a href="#contact" class="inline-flex items-center justify-center px-6 h-11 text-xs font-mono font-bold text-white border border-tactical-border hover:border-tactical-amber hover:bg-tactical-card transition-all duration-200">
-                            לתיאום פגישת ייעוץ ראשונית
-                        </a>
+                    <!-- Factual Highlights -->
+                    <div class="space-y-2 border-t border-brand-border pt-4">
+                        <div class="flex items-center gap-2.5 text-xs sm:text-sm text-brand-textPrimary">
+                            <span class="w-1.5 h-1.5 rounded-full bg-brand-orange"></span>
+                            <span>חקירה ותגובה לאירועי סייבר</span>
+                        </div>
+                        <div class="flex items-center gap-2.5 text-xs sm:text-sm text-brand-textPrimary">
+                            <span class="w-1.5 h-1.5 rounded-full bg-brand-orange"></span>
+                            <span>פורנזיקה דיגיטלית</span>
+                        </div>
+                        <div class="flex items-center gap-2.5 text-xs sm:text-sm text-brand-textPrimary">
+                            <span class="w-1.5 h-1.5 rounded-full bg-brand-orange"></span>
+                            <span>פיתוח וזיהוי איומים</span>
+                        </div>
                     </div>
                 </div>
 
@@ -657,70 +452,42 @@
         </div>
     </section>
 
-    <!-- 7. FAQ Section (Accordion) -->
-    <section id="faq" class="relative z-10 py-20 bg-tactical-card/35 border-b border-tactical-border/55">
+    <!-- 9. Frequently Asked Questions (FAQ Accordion) -->
+    <section id="faq" class="relative z-10 py-16 bg-brand-card/15 border-b border-brand-border/60">
         <div class="max-w-4xl mx-auto px-4 sm:px-6">
             
             <!-- Section Header -->
-            <div class="text-center space-y-2 mb-16">
-                <span class="text-tactical-amber text-xs font-mono tracking-wider">[ FREQUENTLY_ASKED_QUESTIONS // 05 ]</span>
-                <h2 class="text-2xl sm:text-3xl font-extrabold text-white font-heebo tracking-tight">כל מה שבעלי עסקים חייבים לדעת על סייבר</h2>
-                <div class="w-12 h-[1px] bg-tactical-amber mx-auto mt-3"></div>
+            <div class="text-center space-y-2 mb-12">
+                <span class="text-brand-orange text-xs font-mono tracking-wider">[ שאלות נפוצות ]</span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-white font-heebo tracking-tight">מידע נוסף ושאלות נפוצות</h2>
+                <div class="w-12 h-[1px] bg-brand-orange mx-auto mt-2"></div>
             </div>
 
             <!-- Accordion Container -->
             <div class="space-y-4">
                 
                 <!-- FAQ Item 1 -->
-                <div class="bg-tactical-card border border-tactical-border rounded-lg overflow-hidden transition-all duration-300">
-                    <button class="faq-toggle w-full px-6 py-5 flex items-center justify-between text-right font-bold text-white hover:text-tactical-amber transition-colors duration-200 focus:outline-none" aria-expanded="false">
-                        <span class="text-xs sm:text-sm font-mono tracking-wider">[01] האם העסק הקטן שלי באמת מעניין האקרים?</span>
-                        <svg class="w-4 h-4 text-tactical-muted transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
+                <div class="bg-brand-card border border-brand-border rounded overflow-hidden transition-all duration-300">
+                    <button class="faq-toggle w-full px-6 py-5 flex items-center justify-between text-right font-bold text-white hover:text-brand-orange transition-colors duration-200 focus:outline-none" aria-expanded="false">
+                        <span class="text-sm sm:text-base font-heebo">האם השירות מתאים גם לעסק עם כמה מחשבים בודדים?</span>
+                        <svg class="w-4 h-4 text-brand-textSecondary transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
                     </button>
                     <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-                        <div class="px-6 pb-5 pt-2 border-t border-tactical-border text-xs sm:text-sm text-tactical-muted font-light leading-relaxed">
-                            בהחלט כן. האקרים כמעט ולא תוקפים ידנית עסקים קטנים ספציפיים. במקום זאת, הם מפעילים בוטים וכלים אוטומטיים שסורקים אלפי רשתות, שרתים ותיבות מייל ישראליות בו זמנית. הם פשוט מחפשים דלת פתוחה ופרצת אבטחה קלה. ברגע שהם מוצאים אותה, הם חודרים, נועלים את הקבצים וסוחטים את בעל העסק. עסק קטן הוא מטרה מועדפת כי לרוב הוא חסר הגנה לחלוטין.
+                        <div class="px-6 pb-5 pt-2 border-t border-brand-border text-xs sm:text-sm text-brand-textSecondary font-light leading-relaxed">
+                            בהחלט. השירות מותאם במיוחד לעסקים קטנים ובינוניים. המטרה היא להבין את רמת הסיכון ולהכין את העסק לפעולה נכונה במקרה של אירוע.
                         </div>
                     </div>
                 </div>
 
                 <!-- FAQ Item 2 -->
-                <div class="bg-tactical-card border border-tactical-border rounded-lg overflow-hidden transition-all duration-300">
-                    <button class="faq-toggle w-full px-6 py-5 flex items-center justify-between text-right font-bold text-white hover:text-tactical-amber transition-colors duration-200 focus:outline-none" aria-expanded="false">
-                        <span class="text-xs sm:text-sm font-mono tracking-wider">[02] כמה זמן לוקח התהליך והאם הוא ישבית את העבודה שלי?</span>
-                        <svg class="w-4 h-4 text-tactical-muted transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
+                <div class="bg-brand-card border border-brand-border rounded overflow-hidden transition-all duration-300">
+                    <button class="faq-toggle w-full px-6 py-5 flex items-center justify-between text-right font-bold text-white hover:text-brand-orange transition-colors duration-200 focus:outline-none" aria-expanded="false">
+                        <span class="text-sm sm:text-base font-heebo">האם יש התחייבות לזמינות מיידית במקרה חירום?</span>
+                        <svg class="w-4 h-4 text-brand-textSecondary transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
                     </button>
                     <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-                        <div class="px-6 pb-5 pt-2 border-t border-tactical-border text-xs sm:text-sm text-tactical-muted font-light leading-relaxed">
-                            ממש לא. כל הבדיקות, מיפוי התשתיות וסריקת האבטחה מתבצעים ברקע ובתיאום מלא מולכם, ללא הפרעה כלל לעבודה השוטפת של העסק. לאחר שנכין את הדוח, נשב יחד לפגישת הסבר קצרה שבה נציג את הממצאים בבהירות. המטרה היא להבטיח את הגנת העסק במינימום מאמץ ומקסימום שקט נפשי מצדכם.
-                        </div>
-                    </div>
-                </div>
-
-                <!-- FAQ Item 3 -->
-                <div class="bg-tactical-card border border-tactical-border rounded-lg overflow-hidden transition-all duration-300">
-                    <button class="faq-toggle w-full px-6 py-5 flex items-center justify-between text-right font-bold text-white hover:text-tactical-amber transition-colors duration-200 focus:outline-none" aria-expanded="false">
-                        <span class="text-xs sm:text-sm font-mono tracking-wider">[03] מה בדיוק ההבדל בינך לבין טכנאי המחשבים הרגיל שלי?</span>
-                        <svg class="w-4 h-4 text-tactical-muted transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
-                    </button>
-                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-                        <div class="px-6 pb-5 pt-2 border-t border-tactical-border text-xs sm:text-sm text-tactical-muted font-light leading-relaxed">
-                            זו שאלה מצוינת. טכנאי מחשבים (או איש תמיכה כללי) מתמקד בחומרה ובשירותי משרד כלליים: התקנת ווינדוס, הגדרת מדפסות, תיקון בעיות חיבור לרשת וכדומה. 
-                            <br><br>
-                            חוקר סייבר ומומחה DFIR מתמקד אך ורק בעולם האבטחה והלחימה באיומים: איתור ותחקור של עקבות פריצה, חסימת פרצות אבטחה ברמת הקוד והרשת, בלימה ונטרול של האקרים בזמן אמת, והתמודדות עם מתקפות כופר מתוחכמות. זו רמת התמחות מקצועית שונה לחלוטין שנועדה להגן על נכסי המידע שלכם.
-                        </div>
-                    </div>
-                </div>
-
-                <!-- FAQ Item 4 -->
-                <div class="bg-tactical-card border border-tactical-border rounded-lg overflow-hidden transition-all duration-300">
-                    <button class="faq-toggle w-full px-6 py-5 flex items-center justify-between text-right font-bold text-white hover:text-tactical-amber transition-colors duration-200 focus:outline-none" aria-expanded="false">
-                        <span class="text-xs sm:text-sm font-mono tracking-wider">[04] האם השירות מותאם לתקציב של עסק קטן?</span>
-                        <svg class="w-4 h-4 text-tactical-muted transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
-                    </button>
-                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-                        <div class="px-6 pb-5 pt-2 border-t border-tactical-border text-xs sm:text-sm text-tactical-muted font-light leading-relaxed">
-                            כן, לחלוטין. יצרתי את השירות הזה בדיוק במטרה לענות על הצורך של עסקים קטנים ובינוניים שאין להם תקציבים של חברות ענק. החבילה מותאמת באופן אישי לגודל העסק ומספר המחשבים, ומעניקה פתרון הגנה הוליסטי במחיר הגיוני, קבוע והוגן לעסק קטן. פגישת הייעוץ הראשונית והערכת המצב הראשונית היא ללא שום עלות וללא התחייבות.
+                        <div class="px-6 pb-5 pt-2 border-t border-brand-border text-xs sm:text-sm text-brand-textSecondary font-light leading-relaxed">
+                            המענה ניתן בשעות הפעילות, בתיאום ובכפוף לזמינות. פרטי הפנייה ואופן הפעולה יוגדרו מראש מול הלקוח.
                         </div>
                     </div>
                 </div>
@@ -729,79 +496,73 @@
         </div>
     </section>
 
-    <!-- 8. Contact Form & Footer -->
-    <section id="contact" class="relative z-10 py-20 overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- 10. Contact Section -->
+    <section id="contact" class="relative z-10 py-16 overflow-hidden">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
                 
-                <!-- Contact Info Column (Right side RTL) -->
+                <!-- Contact Info Column -->
                 <div class="lg:col-span-5 space-y-6 text-right self-center">
-                    <span class="text-tactical-amber text-xs font-mono tracking-wider">[ LEAD_SUBMISSION_PORTAL // 06 ]</span>
-                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white font-heebo tracking-tight">בוא נחסום את הפרצה הבאה שלכם היום</h2>
-                    <p class="text-tactical-muted font-light leading-relaxed text-xs sm:text-sm">
-                        אל תחכו לפריצה הבאה כדי להבין מה היה צריך לתקן. מלאו את הפרטים בטופס או פנו ישירות בווטסאפ לשיחה מהירה, ונחזור אליכם לתיאום פגישת ייעוץ ובדיקה ראשונית ללא התחייבות.
+                    <span class="text-brand-orange text-xs font-mono tracking-wider">[ צור קשר ]</span>
+                    <h2 class="text-3xl font-extrabold text-white font-heebo tracking-tight">בואו נבדוק עד כמה העסק שלכם מוכן</h2>
+                    <p class="text-brand-textSecondary font-light leading-relaxed text-xs sm:text-sm">
+                        השאירו פרטים או שלחו הודעה בוואטסאפ לתיאום שיחת היכרות ללא התחייבות.
                     </p>
 
-                    <!-- Bullet trust lists -->
-                    <div class="space-y-4 pt-4 text-xs font-mono text-tactical-muted border-t border-tactical-border">
+                    <!-- Direct Fallbacks -->
+                    <div class="space-y-4 pt-4 text-xs sm:text-sm text-brand-textPrimary border-t border-brand-border font-medium">
                         <div class="flex items-center gap-3">
-                            <span class="text-tactical-amber">[01]</span>
+                            <span class="text-brand-orange">✓</span>
                             <span>ייעוץ ובדיקה ראשונית ללא עלות וללא התחייבות</span>
                         </div>
                         <div class="flex items-center gap-3">
-                            <span class="text-tactical-amber">[02]</span>
-                            <span>סודיות מובטחת בהסכם סודיות (NDA) מלא</span>
+                            <span class="text-brand-orange">✓</span>
+                            <span>אפשרות להסכם סודיות (NDA) בהתאם לצורך</span>
                         </div>
                         <div class="flex items-center gap-3">
-                            <span class="text-tactical-amber">[03]</span>
-                            <span>ליווי אישי ומקצועי בגובה העיניים</span>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <span class="text-tactical-amber">[04]</span>
-                            <span>דוא"ל ישיר לפניות: <a href="mailto:gabaymaor123@gmail.com" class="text-tactical-amber hover:underline font-mono">gabaymaor123@gmail.com</a></span>
+                            <span class="text-brand-orange">✉</span>
+                            <span>דוא"ל ישיר לפניות: <a href="mailto:gabaymaor123@gmail.com" class="text-brand-orange hover:underline font-mono">gabaymaor123@gmail.com</a></span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Technical Form Column (Left side RTL) -->
+                <!-- Form Column -->
                 <div class="lg:col-span-7">
-                    <div class="relative bg-tactical-card border border-tactical-border p-6 sm:p-10">
-                        <span class="absolute top-0 right-0 w-2 h-[1px] bg-tactical-amber"></span>
-                        <span class="absolute bottom-0 left-0 w-2 h-[1px] bg-tactical-amber"></span>
+                    <div class="relative bg-brand-card border border-brand-border p-6 sm:p-10 rounded shadow-md">
                         
-                        <h3 class="text-lg sm:text-xl font-bold text-white mb-6 font-mono text-right">[ FORM_INBOUND_ENQUIRY ]</h3>
+                        <h3 class="text-base sm:text-lg font-bold text-white mb-6 font-heebo text-right">טופס תיאום שיחת היכרות</h3>
 
                         <!-- Formspree form with customized AJAX execution to avoid redirects -->
                         <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-5 text-right relative z-10">
                             
                             <!-- Full Name Field -->
                             <div>
-                                <label for="name" class="block text-xs font-mono text-tactical-muted mb-2">// שם מלא *</label>
-                                <input type="text" id="name" name="name" required class="w-full px-4 h-12 bg-tactical-bg border border-tactical-border focus:border-tactical-amber text-white text-sm transition-all outline-none text-right placeholder-slate-600 font-mono" placeholder="ישראל ישראלי">
+                                <label for="name" class="block text-xs text-brand-textSecondary mb-2 font-medium">שם מלא *</label>
+                                <input type="text" id="name" name="name" required class="w-full px-4 h-12 bg-brand-bg border border-brand-border focus:border-brand-orange text-white text-sm transition-all outline-none text-right rounded" placeholder="ישראל ישראלי">
                             </div>
 
                             <!-- Phone Field -->
                             <div>
-                                <label for="phone" class="block text-xs font-mono text-tactical-muted mb-2">// מספר טלפון *</label>
-                                <input type="tel" id="phone" name="phone" required class="w-full px-4 h-12 bg-tactical-bg border border-tactical-border focus:border-tactical-amber text-white text-sm transition-all outline-none text-right placeholder-slate-600 font-mono" placeholder="050-1234567">
+                                <label for="phone" class="block text-xs text-brand-textSecondary mb-2 font-medium">מספר טלפון *</label>
+                                <input type="tel" id="phone" name="phone" required class="w-full px-4 h-12 bg-brand-bg border border-brand-border focus:border-brand-orange text-white text-sm transition-all outline-none text-right rounded" placeholder="050-1234567">
                             </div>
 
                             <!-- Business Name Field -->
                             <div>
-                                <label for="business" class="block text-xs font-mono text-tactical-muted mb-2">// שם העסק / החברה *</label>
-                                <input type="text" id="business" name="business" required class="w-full px-4 h-12 bg-tactical-bg border border-tactical-border focus:border-tactical-amber text-white text-sm transition-all outline-none text-right placeholder-slate-600 font-mono" placeholder="למשל: סטודיו לצילום, משרד עורכי דין">
+                                <label for="business" class="block text-xs text-brand-textSecondary mb-2 font-medium">שם העסק / החברה *</label>
+                                <input type="text" id="business" name="business" required class="w-full px-4 h-12 bg-brand-bg border border-brand-border focus:border-brand-orange text-white text-sm transition-all outline-none text-right rounded" placeholder="למשל: סטודיו לצילום, משרד עורכי דין">
                             </div>
 
                             <!-- Optional Message Field -->
                             <div>
-                                <label for="message" class="block text-xs font-mono text-tactical-muted mb-2">// הערות או מידע נוסף (אופציונלי)</label>
-                                <textarea id="message" name="message" rows="3" class="w-full p-4 bg-tactical-bg border border-tactical-border focus:border-tactical-amber text-white text-sm transition-all outline-none text-right placeholder-slate-600 resize-none font-mono" placeholder="ספר בקצרה על העסק או אם יש לך חשד לאירוע אבטחה פעיל..."></textarea>
+                                <label for="message" class="block text-xs text-brand-textSecondary mb-2 font-medium">מידע נוסף (אופציונלי)</label>
+                                <textarea id="message" name="message" rows="3" class="w-full p-4 bg-brand-bg border border-brand-border focus:border-brand-orange text-white text-sm transition-all outline-none text-right rounded resize-none" placeholder="פרטים נוספים על העסק או המערכות שלכם..."></textarea>
                             </div>
 
                             <!-- Submit Button -->
                             <div class="pt-2">
-                                <button type="submit" id="submit-btn" class="w-full flex items-center justify-center px-6 h-12 text-xs font-mono font-bold text-tactical-bg bg-tactical-amber hover:bg-amber-500 active:scale-95 transition-all duration-200 border border-tactical-amber cursor-pointer uppercase tracking-wider">
-                                    [ SUBMIT_PROPOSAL_REQUEST ]
+                                <button type="submit" id="submit-btn" class="w-full flex items-center justify-center px-6 h-12 text-sm font-bold text-white bg-brand-orange hover:bg-brand-orangeHover active:scale-95 transition-all duration-200 border border-brand-orange rounded cursor-pointer">
+                                    אשמח לשיחת היכרות
                                 </button>
                             </div>
 
@@ -814,60 +575,60 @@
     </section>
 
     <!-- Success Modal Popup -->
-    <div id="success-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-tactical-bg/95">
-        <div class="bg-tactical-card border border-tactical-amber max-w-md w-full p-8 text-center space-y-6 relative">
-            <span class="absolute top-0 right-0 w-2 h-[1px] bg-tactical-amber"></span>
-            <span class="absolute bottom-0 left-0 w-2 h-[1px] bg-tactical-amber"></span>
-
-            <div class="w-12 h-12 border border-tactical-amber text-tactical-amber flex items-center justify-center mx-auto">
+    <div id="success-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-brand-bg/95">
+        <div class="bg-brand-card border border-brand-orange max-w-md w-full p-8 text-center space-y-6 relative rounded">
+            <div class="w-12 h-12 border border-brand-orange text-brand-orange flex items-center justify-center mx-auto rounded-full">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
             </div>
-            <h3 class="text-lg font-mono font-extrabold text-white">[ TRANSACTION_SUCCESSFUL ]</h3>
-            <p class="text-xs text-tactical-muted leading-relaxed font-mono">
-                הודעתך התקבלה ישירות במסוף הבקשות של מאור גבאי. 
+            <h3 class="text-lg font-bold text-white font-heebo">פנייתך התקבלה בהצלחה</h3>
+            <p class="text-xs text-brand-textSecondary leading-relaxed">
+                תודה רבה על פנייתך. ההודעה הגיעה ישירות למאור גבאי.
                 <br><br>
-                פנייתך תיבדק בהקדם ותשובה תימסר תוך מספר שעות לתיאום סקירת מערכת ראשונית.
+                שיחת היכרות ללא התחייבות תתואם עמך בהקדם האפשרי.
             </p>
-            <button id="close-modal" class="w-full h-11 bg-tactical-amber text-tactical-bg hover:bg-amber-500 font-mono font-bold text-xs cursor-pointer">
-                [ CLOSE_SESSION ]
+            <button id="close-modal" class="w-full h-11 bg-brand-orange text-white hover:bg-brand-orangeHover font-bold text-xs cursor-pointer rounded">
+                סגור
             </button>
         </div>
     </div>
 
-    <!-- 9. Footer (Editorial Muted Grid) -->
-    <footer class="relative z-10 bg-tactical-bg border-t border-tactical-border/70 py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+    <!-- 11. Footer -->
+    <footer class="relative z-10 bg-brand-bg border-t border-brand-border/70 py-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
             
-            <!-- Brand -->
-            <div class="flex items-center justify-center gap-2 text-xs font-mono text-white tracking-widest uppercase">
-                <span class="text-tactical-amber font-bold">[</span>
-                <span>מאור גבאי // אבטחת מידע וחקירות דיגיטליות</span>
-                <span class="text-tactical-amber font-bold">]</span>
+            <!-- Brand Logo -->
+            <div class="flex items-center justify-center gap-2 text-sm font-bold text-white">
+                <span>מאור גבאי | אבטחת מידע וחקירות דיגיטליות</span>
             </div>
 
-            <!-- Short Disclaimer -->
-            <p class="text-[10px] font-mono text-tactical-muted max-w-2xl mx-auto leading-relaxed uppercase">
-                השירות מבוצע תחת חובת סודיות מלאה והסכמי סודיות קשיחים (NDA) להגנה על המידע האישי והסודי ביותר של העסק והלקוחות שלכם. פגישת הייעוץ והאבחון הראשוניים מוצעים ללא עלות וללא התחייבות.
+            <!-- Footer Text -->
+            <p class="text-xs text-brand-textSecondary max-w-2xl mx-auto leading-relaxed">
+                שירות אישי לעסקים קטנים הכולל אבחון מצב אבטחת המידע, תוכנית שיפור, מעקב והיערכות לאירועי סייבר.
+            </p>
+
+            <!-- NDA reference -->
+            <p class="text-[10.5px] text-brand-textSecondary font-medium">
+                אפשרות להסכם סודיות בהתאם לצורך.
             </p>
 
             <!-- Copyright -->
-            <div class="text-[9px] text-slate-700 font-mono">
-                &copy; 2026 Maor Gabay Cybersecurity & DFIR. All Rights Reserved. // PORTAL_NODE_01
+            <div class="text-[10px] text-slate-700 font-mono pt-2">
+                &copy; 2026 Maor Gabay Cybersecurity & DFIR. All Rights Reserved.
             </div>
 
         </div>
     </footer>
 
-    <!-- 10. Floating WhatsApp CTA Button (High End Minimalist style) -->
-    <a href="https://wa.me/972509798704?text=%D7%A9%D7%9C%D7%95%D7%9D%20%D7%9E%D7%90%D7%95%D7%A8%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%9E%D7%94%D7%90%D7%AA%D7%A8%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A4%D7%A8%D7%98%D7%99%D7%9D%20%D7%A2%D7%9C%20%D7%90%D7%91%D7%98%D7%97%D7%AA%20%D7%94%D7%A2%D7%A1%D7%A7%20%D7%A9%D7%9C%D7%99." target="_blank" class="fixed bottom-6 left-6 z-50 flex items-center justify-center w-12 h-12 bg-tactical-bg border border-tactical-amber text-tactical-amber hover:bg-tactical-amber hover:text-tactical-bg hover:scale-110 active:scale-95 transition-all duration-200 shadow-xl" aria-label="פנייה בווטסאפ">
+    <!-- 12. Floating WhatsApp CTA Button (Clean, Non-intrusive) -->
+    <a href="https://wa.me/972509798704?text=%D7%A9%D7%9C%D7%95%D7%9D%20%D7%9E%D7%90%D7%95%D7%A8%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%9E%D7%94%D7%90%D7%AA%D7%A8%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A4%D7%A8%D7%98%D7%99%D7%9D%20%D7%A2%D7%9C%20%D7%90%D7%91%D7%98%D7%97%D7%AA%20%D7%94%D7%A2%D7%A1%D7%A7%20%D7%A9%D7%9C%D7%99." target="_blank" class="fixed bottom-6 left-6 z-50 flex items-center justify-center w-12 h-12 bg-green-600 hover:bg-green-500 text-white hover:scale-110 active:scale-95 rounded-full shadow-lg transition-all duration-200" aria-label="פנייה בוואטסאפ">
         <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
             <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.504-5.711-1.465L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.963C16.388 2.025 13.91 1 11.3 1 6.131 1 1.922 5.161 1.919 10.3c-.001 1.702.447 3.366 1.301 4.848l-.427 1.56 1.597-.414zM17.65 19.3c.094-.15.485-.708.579-.858.093-.15-.094-.325-.281-.413s-1.124-.554-1.218-.591-.187-.038-.281.094-.375.469-.469.581-.187.113-.375.019a4.736 4.736 0 0 1-1.393-.859 5.228 5.228 0 0 1-1.012-1.261c-.113-.188-.012-.288.081-.381.085-.084.188-.225.281-.338.094-.112.125-.188.188-.313s.031-.244-.015-.338-.375-.901-.516-1.238c-.137-.329-.277-.281-.375-.281h-.32c-.113 0-.294.042-.449.213-.155.171-.592.578-.592 1.411s.607 1.636.691 1.749c.084.113 1.194 1.823 2.894 2.553.404.174.72.277.965.354.406.129.776.111 1.069.067.327-.049 1.006-.411 1.147-.809z"/>
         </svg>
     </a>
 
-    <!-- JavaScript For Menu Toggle, Accordion and Form Submission -->
+    <!-- JavaScript logic -->
     <script>
-        // 1. Mobile Menu Toggle Logic
+        // 1. Mobile Menu Toggle
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         const menuIcon = document.getElementById('menu-icon');
@@ -875,10 +636,8 @@
         mobileMenuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
             if (mobileMenu.classList.contains('hidden')) {
-                // Menu hamburger icon
                 menuIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" d="M3.75 9h16.5m-16.5 6.75h16.5"/>`;
             } else {
-                // Close 'X' icon
                 menuIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>`;
             }
         });
@@ -892,7 +651,7 @@
             });
         });
 
-        // 2. Collapsible FAQ Accordion Logic
+        // 2. Collapsible FAQ Accordion
         const faqToggles = document.querySelectorAll('.faq-toggle');
 
         faqToggles.forEach(toggle => {
@@ -901,7 +660,7 @@
                 const content = toggle.nextElementSibling;
                 const icon = toggle.querySelector('svg');
 
-                // Collapse all other accordion items first for neat single-open behavior
+                // Collapse all other accordion items first
                 faqToggles.forEach(otherToggle => {
                     if (otherToggle !== toggle) {
                         otherToggle.setAttribute('aria-expanded', 'false');
@@ -911,7 +670,7 @@
                     }
                 });
 
-                // Toggle this specific accordion item
+                // Toggle selected accordion item
                 if (isExpanded) {
                     toggle.setAttribute('aria-expanded', 'false');
                     content.style.maxHeight = '0px';
@@ -934,15 +693,14 @@
             event.preventDefault();
             const data = new FormData(event.target);
             
-            // Disable button and show spinner
             submitBtn.disabled = true;
             submitBtn.classList.add('opacity-75', 'cursor-not-allowed');
             submitBtn.innerHTML = `
-                <svg class="animate-spin -ml-1 mr-3 h-4 w-4 text-tactical-bg inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                <svg class="animate-spin -ml-1 mr-3 h-4 w-4 text-white inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                     <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
                     <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                 </svg>
-                // PROCESSING_ENQUIRY...
+                מעבד את פנייתך...
             `;
             
             try {
@@ -955,25 +713,22 @@
                 });
                 
                 if (response.ok) {
-                    // Reset form and show success popup
                     form.reset();
                     successModal.classList.remove('hidden');
                 } else {
                     const result = await response.json();
-                    let errorMessage = "אירעה שגיאה בעיבוד הנתונים. אנח ודא שכל השדות מלאים נכון ונסה שוב.";
+                    let errorMessage = "אירעה שגיאה בעיבוד הנתונים. אנא ודא שכל השדות מלאים נכון ונסה שוב.";
                     if (result.errors && result.errors.length > 0) {
                         errorMessage = result.errors.map(err => err.message).join(", ");
                     }
                     alert("שגיאה: " + errorMessage);
                 }
             } catch (error) {
-                // Fallback gracefully
                 alert("אירעה שגיאת חיבור ברשת. נא לוודא שאתה מחובר לאינטרנט או פנה ישירות בווטסאפ.");
             } finally {
-                // Restore button state
                 submitBtn.disabled = false;
                 submitBtn.classList.remove('opacity-75', 'cursor-not-allowed');
-                submitBtn.innerHTML = "[ SUBMIT_PROPOSAL_REQUEST ]";
+                submitBtn.innerHTML = "אשמח לשיחת היכרות";
             }
         });
 
