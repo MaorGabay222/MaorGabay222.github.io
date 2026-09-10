@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Metadata Requirements -->
-    <title>מאור גבאי | אבטחת מידע ותגובה לאירועי סייבר לעסקים קטנים</title>
-    <meta name="description" content="אבחון מצב אבטחת המידע, תוכנית שיפור, ליווי תקופתי והיערכות לטיפול באירועי סייבר לעסקים קטנים.">
+    <!-- Meta Tags -->
+    <title>SteadyGuard | אבטחת מידע וחקירות דיגיטליות לעסקים קטנים</title>
+    <meta name="description" content="אבחון מצב אבטחת המידע, תוכנית שיפור, ליווי תקופתי והיערכות לטיפול באירועי סייבר לעסקים קטנים. שירות אישי על ידי מאור גבאי.">
     
-    <!-- Open Graph Sharing Metadata -->
-    <meta property="og:title" content="האם העסק שלך מוכן לאירוע סייבר?">
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="האם העסק שלך מוכן לרגע שבו משהו משתבש?">
     <meta property="og:description" content="ליווי אישי לעסקים קטנים: אבחון מצב האבטחה, תוכנית שיפור, בדיקות תקופתיות והיערכות לאירועי סייבר.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://maorgabay222.github.io/">
     
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23F97316'><rect x='3' y='3' width='18' height='18' rx='2' fill='none' stroke='%23F97316' stroke-width='2'/><circle cx='12' cy='12' r='4' fill='none' stroke='%23F97316' stroke-width='1.5'/><path d='M12 3v4M12 17v4M3 12h4M17 12h4' stroke='%23F97316' stroke-width='1.5'/></svg>">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%231769E0'><rect x='3' y='3' width='18' height='18' rx='2' fill='none' stroke='%231769E0' stroke-width='2'/><circle cx='12' cy='12' r='4' fill='none' stroke='%231769E0' stroke-width='1.5'/><path d='M12 3v4M12 17v4M3 12h4M17 12h4' stroke='%231769E0' stroke-width='1.5'/></svg>">
 
     <!-- Fonts (Heebo & Assistant) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,13 +30,16 @@
                 extend: {
                     colors: {
                         brand: {
-                            bg: '#0B0D11',        // Deep Graphite/Black
-                            card: '#12141C',      // Subtle card background
-                            border: '#1E222E',    // Restrained soft borders
-                            orange: '#F97316',    // Visually prominent Orange Accent
-                            orangeHover: '#EA580C',
-                            textPrimary: '#F4F4F0', // High contrast off-white text
-                            textSecondary: '#94A3B8' // Readable gray text
+                            bg: '#F6F9FC',          // Light gray/blue main bg
+                            white: '#FFFFFF',       // Clean white for sections
+                            header: '#0B1F33',      // Dark blue for headers
+                            blue: '#1769E0',        // Action blue
+                            blueHover: '#1152C5',
+                            turquoise: '#0F8B8D',   // Subdued turquoise
+                            textPrimary: '#12263A', // Primary text
+                            textSecondary: '#526579', // Secondary text
+                            border: '#DCE6EF',      // Soft border
+                            warning: '#B45309'      // Subtle warning amber
                         }
                     },
                     fontFamily: {
@@ -51,15 +54,9 @@
     <style>
         body {
             font-family: 'Assistant', 'Heebo', sans-serif;
-            background-color: #0B0D11;
-            color: #F4F4F0;
+            background-color: #F6F9FC;
+            color: #12263A;
             overflow-x: hidden;
-        }
-
-        /* Technical Dot Grid - used very sparingly to convey a subtle tech atmosphere (30%) */
-        .subtle-dots {
-            background-image: radial-gradient(#1E222E 1.2px, transparent 1.2px);
-            background-size: 32px 32px;
         }
 
         /* Clean Scrollbar */
@@ -67,14 +64,27 @@
             width: 6px;
         }
         ::-webkit-scrollbar-track {
-            background: #0B0D11;
+            background: #F6F9FC;
         }
         ::-webkit-scrollbar-thumb {
-            background: #1E222E;
+            background: #DCE6EF;
             border-radius: 3px;
         }
         ::-webkit-scrollbar-thumb:hover {
-            background: #F97316;
+            background: #1769E0;
+        }
+
+        /* Respect prefers-reduced-motion for Accessibility */
+        @media (prefers-reduced-motion: reduce) {
+            *, ::before, ::after {
+                animation-delay: -1ms !important;
+                animation-duration: 1ms !important;
+                animation-iteration-count: 1 !important;
+                background-attachment: initial !important;
+                scroll-behavior: auto !important;
+                transition-duration: 0s !important;
+                transition-delay: 0s !important;
+            }
         }
     </style>
 
@@ -87,120 +97,118 @@
         gtag('config', 'G-XXXXXXXXXX');
     </script>
 </head>
-<body class="relative min-h-screen subtle-dots antialiased selection:bg-brand-orange/20 selection:text-white">
+<body class="relative min-h-screen antialiased selection:bg-brand-blue/20">
 
-    <!-- 1. Header -->
-    <header class="sticky top-0 z-50 w-full bg-brand-bg/95 backdrop-blur-md border-b border-brand-border/70 transition-all duration-300">
+    <!-- 1. Header (Sticky Light Editorial Navbar) -->
+    <header class="sticky top-0 z-50 w-full bg-brand-white/95 backdrop-blur-md border-b border-brand-border transition-all duration-300">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
             
-            <!-- Brand Name -->
-            <a href="#" class="flex items-center gap-2 group focus:outline-none">
-                <span class="text-base font-extrabold text-white tracking-wide font-heebo leading-tight">מאור גבאי | אבטחת מידע וחקירות דיגיטליות</span>
+            <!-- Brand Name & Logo -->
+            <a href="#" class="flex items-center gap-2 group focus:outline-none focus:ring-2 focus:ring-brand-blue focus:ring-offset-2 rounded px-1 py-0.5">
+                <span class="text-base font-extrabold text-brand-header tracking-wide font-heebo leading-tight">SteadyGuard | אבטחת מידע וחקירות דיגיטליות</span>
             </a>
 
             <!-- Navigation Links -->
-            <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-brand-textSecondary">
-                <a href="#services" class="hover:text-brand-orange transition-colors duration-200">השירות</a>
-                <a href="#how-it-works" class="hover:text-brand-orange transition-colors duration-200">איך זה עובד</a>
-                <a href="#about" class="hover:text-brand-orange transition-colors duration-200">עליי</a>
-                <a href="#faq" class="hover:text-brand-orange transition-colors duration-200">שאלות נפוצות</a>
-                <a href="#contact" class="hover:text-brand-orange transition-colors duration-200">יצירת קשר</a>
+            <nav class="hidden md:flex items-center gap-6 text-sm font-semibold text-brand-textSecondary">
+                <a href="#services" class="hover:text-brand-blue transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-brand-blue focus:ring-offset-2 rounded px-1">השירות</a>
+                <a href="#how-it-works" class="hover:text-brand-blue transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-brand-blue focus:ring-offset-2 rounded px-1">איך זה עובד</a>
+                <a href="#about" class="hover:text-brand-blue transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-brand-blue focus:ring-offset-2 rounded px-1">עליי</a>
+                <a href="#faq" class="hover:text-brand-blue transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-brand-blue focus:ring-offset-2 rounded px-1">שאלות נפוצות</a>
+                <a href="#contact" class="hover:text-brand-blue transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-brand-blue focus:ring-offset-2 rounded px-1">יצירת קשר</a>
             </nav>
 
-            <!-- Header CTA Button -->
+            <!-- Header CTA Button (Minimum height: 48px / h-12) -->
             <div class="flex items-center gap-4">
-                <a href="#contact" class="hidden sm:inline-flex items-center justify-center px-4 h-10 text-xs font-bold text-white bg-brand-orange hover:bg-brand-orangeHover transition-all duration-200 rounded">
+                <a href="#contact" class="hidden sm:inline-flex items-center justify-center px-5 h-12 text-xs font-bold text-brand-white bg-brand-blue hover:bg-brand-blueHover active:scale-95 transition-all duration-200 rounded focus:outline-none focus:ring-2 focus:ring-brand-blue focus:ring-offset-2">
                     שיחת היכרות ללא התחייבות
                 </a>
                 
                 <!-- Mobile Menu Button -->
-                <button id="mobile-menu-btn" class="md:hidden flex items-center justify-center w-10 h-10 text-brand-textSecondary hover:text-white border border-brand-border bg-brand-card rounded focus:outline-none" aria-label="תפריט">
+                <button id="mobile-menu-btn" class="md:hidden flex items-center justify-center w-11 h-11 text-brand-textSecondary hover:text-brand-header border border-brand-border bg-brand-bg rounded focus:outline-none focus:ring-2 focus:ring-brand-blue focus:ring-offset-2" aria-label="תפריט">
                     <svg id="menu-icon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 9h16.5m-16.5 6.75h16.5"/></svg>
                 </button>
             </div>
         </div>
 
         <!-- Mobile Navigation Menu -->
-        <div id="mobile-menu" class="hidden md:hidden w-full bg-brand-bg border-b border-brand-border px-4 py-4 space-y-2 absolute top-20 right-0 left-0 transition-all duration-300 z-40 shadow-xl">
-            <a href="#services" class="block py-2.5 px-4 text-sm text-brand-textSecondary hover:text-brand-orange hover:bg-brand-card rounded transition-colors">השירות</a>
-            <a href="#how-it-works" class="block py-2.5 px-4 text-sm text-brand-textSecondary hover:text-brand-orange hover:bg-brand-card rounded transition-colors">איך זה עובד</a>
-            <a href="#about" class="block py-2.5 px-4 text-sm text-brand-textSecondary hover:text-brand-orange hover:bg-brand-card rounded transition-colors">עליי</a>
-            <a href="#faq" class="block py-2.5 px-4 text-sm text-brand-textSecondary hover:text-brand-orange hover:bg-brand-card rounded transition-colors">שאלות נפוצות</a>
-            <a href="#contact" class="block py-2.5 px-4 text-sm text-brand-textSecondary hover:text-brand-orange hover:bg-brand-card rounded transition-colors">יצירת קשר</a>
+        <div id="mobile-menu" class="hidden md:hidden w-full bg-brand-white border-b border-brand-border px-4 py-4 space-y-2 absolute top-20 right-0 left-0 transition-all duration-300 z-40 shadow-xl">
+            <a href="#services" class="block py-2.5 px-4 text-sm font-semibold text-brand-textSecondary hover:text-brand-blue hover:bg-brand-bg rounded transition-colors focus:outline-none focus:ring-2 focus:ring-brand-blue">השירות</a>
+            <a href="#how-it-works" class="block py-2.5 px-4 text-sm font-semibold text-brand-textSecondary hover:text-brand-blue hover:bg-brand-bg rounded transition-colors focus:outline-none focus:ring-2 focus:ring-brand-blue">איך זה עובד</a>
+            <a href="#about" class="block py-2.5 px-4 text-sm font-semibold text-brand-textSecondary hover:text-brand-blue hover:bg-brand-bg rounded transition-colors focus:outline-none focus:ring-2 focus:ring-brand-blue">עליי</a>
+            <a href="#faq" class="block py-2.5 px-4 text-sm font-semibold text-brand-textSecondary hover:text-brand-blue hover:bg-brand-bg rounded transition-colors focus:outline-none focus:ring-2 focus:ring-brand-blue">שאלות נפוצות</a>
+            <a href="#contact" class="block py-2.5 px-4 text-sm font-semibold text-brand-textSecondary hover:text-brand-blue hover:bg-brand-bg rounded transition-colors focus:outline-none focus:ring-2 focus:ring-brand-blue">יצירת קשר</a>
             <div class="pt-2">
-                <a href="#contact" class="block text-center py-2.5 px-4 text-xs font-bold text-white bg-brand-orange hover:bg-brand-orangeHover rounded">
+                <a href="#contact" class="block text-center py-3.5 px-4 text-xs font-bold text-brand-white bg-brand-blue hover:bg-brand-blueHover rounded focus:outline-none focus:ring-2 focus:ring-brand-blue">
                     שיחת היכרות ללא התחייבות
                 </a>
             </div>
         </div>
     </header>
 
-    <!-- 2. Hero Section (Simplified, Clean Visual Balance) -->
-    <section class="relative z-10 pt-12 pb-16 md:py-24 overflow-hidden border-b border-brand-border/60">
+    <!-- 2. Hero Section (Clean, Approachable Design) -->
+    <section class="relative z-10 py-12 md:py-20 bg-brand-white border-b border-brand-border overflow-hidden">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 
                 <!-- Hero Content -->
                 <div class="lg:col-span-7 space-y-6 text-right order-1">
                     
-                    <!-- Factual Trust Points Grid -->
-                    <div class="flex flex-wrap gap-3 text-xs text-brand-orange font-medium">
-                        <span class="px-2.5 py-1 bg-brand-card border border-brand-border rounded flex items-center gap-1.5">
-                            <span class="w-1.5 h-1.5 rounded-full bg-brand-orange"></span>
-                            שירות אישי ומקצועי
-                        </span>
-                        <span class="px-2.5 py-1 bg-brand-card border border-brand-border rounded flex items-center gap-1.5">
-                            <span class="w-1.5 h-1.5 rounded-full bg-brand-orange"></span>
-                            עבודה דיסקרטית
-                        </span>
-                        <span class="px-2.5 py-1 bg-brand-card border border-brand-border rounded flex items-center gap-1.5">
-                            <span class="w-1.5 h-1.5 rounded-full bg-brand-orange"></span>
-                            הסברים בשפה ברורה
-                        </span>
+                    <!-- Clean sub-heading tags -->
+                    <div class="flex flex-wrap gap-2 text-xs font-bold text-brand-turquoise">
+                        <span class="px-2.5 py-1 bg-brand-bg border border-brand-border rounded flex items-center gap-1.5">[ שירות אישי ומקצועי ]</span>
+                        <span class="px-2.5 py-1 bg-brand-bg border border-brand-border rounded flex items-center gap-1.5">[ עבודה דיסקרטית ]</span>
+                        <span class="px-2.5 py-1 bg-brand-bg border border-brand-border rounded flex items-center gap-1.5">[ הסברים בשפה ברורה ]</span>
                     </div>
 
                     <!-- Main Heading -->
-                    <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white leading-tight font-heebo tracking-tight">
-                        בעל עסק? מה יקרה אם מחר בבוקר תגלה שהאקר נמצא בתוך הרשת שלך?
+                    <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-brand-header leading-tight font-heebo tracking-tight">
+                        האם העסק שלך מוכן לרגע שבו משהו משתבש?
                     </h1>
 
-                    <!-- Supporting Text -->
+                    <!-- Supporting text -->
                     <p class="text-base sm:text-lg text-brand-textSecondary max-w-2xl font-light leading-relaxed">
-                        מתקפת סייבר לא חייבת להיות מכוונת לחברה גדולה. גם עסק קטן עלול להיפגע מכופרה, מגניבת מידע או מתקיפה שמוחקת מידע חיוני.
+                        מתקפת סייבר אינה פוגעת רק בחברות גדולות. גם עסק קטן עלול להתמודד עם כופרה, גניבת מידע, פריצה לחשבונות או מחיקה של מידע חיוני.
                     </p>
 
-                    <!-- CTAs above the fold -->
+                    <!-- CTAs above the fold (Height >= 48px) -->
                     <div class="flex flex-col sm:flex-row gap-4 pt-2">
-                        <a href="#contact" class="inline-flex items-center justify-center gap-2 px-6 h-12 text-sm font-bold text-white bg-brand-orange hover:bg-brand-orangeHover active:scale-95 transition-all duration-200 rounded shadow-md cursor-pointer">
-                            <span>בואו נבדוק את מצב האבטחה בעסק</span>
+                        <a href="#contact" class="inline-flex items-center justify-center gap-2 px-6 h-12 text-sm font-bold text-brand-white bg-brand-blue hover:bg-brand-blueHover active:scale-95 transition-all duration-200 rounded shadow-sm focus:outline-none focus:ring-2 focus:ring-brand-blue focus:ring-offset-2">
+                            <span>רוצה לבדוק את מצב העסק?</span>
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
                         </a>
                         
-                        <a href="https://wa.me/972509798704?text=%D7%A9%D7%9C%D7%95%D7%9D%20%D7%9E%D7%90%D7%95%D7%A8%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%9E%D7%94%D7%90%D7%AA%D7%A8%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A4%D7%A8%D7%98%D7%99%D7%9D%20%D7%A2%D7%9C%20%D7%90%D7%91%D7%98%D7%97%D7%AA%20%D7%94%D7%A2%D7%A1%D7%A7%20%D7%A9%D7%9C%D7%99." target="_blank" class="inline-flex items-center justify-center gap-2 px-6 h-12 text-sm font-bold text-brand-textPrimary border border-brand-border bg-brand-card hover:border-brand-orange hover:bg-brand-card/85 transition-all duration-200 rounded">
-                            <!-- WhatsApp Icon Minimal -->
-                            <svg class="w-4 h-4 fill-current text-green-500" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.504-5.711-1.465L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.963C16.388 2.025 13.91 1 11.3 1 6.131 1 1.922 5.161 1.919 10.3c-.001 1.702.447 3.366 1.301 4.848l-.427 1.56 1.597-.414zM17.65 19.3c.094-.15.485-.708.579-.858.093-.15-.094-.325-.281-.413s-1.124-.554-1.218-.591-.187-.038-.281.094-.375.469-.469.581-.187.113-.375.019a4.736 4.736 0 0 1-1.393-.859 5.228 5.228 0 0 1-1.012-1.261c-.113-.188-.012-.288.081-.381.085-.084.188-.225.281-.338.094-.112.125-.188.188-.313s.031-.244-.015-.338-.375-.901-.516-1.238c-.137-.329-.277-.281-.375-.281h-.32c-.113 0-.294.042-.449.213-.155.171-.592.578-.592 1.411s.607 1.636.691 1.749c.084.113 1.194 1.823 2.894 2.553.404.174.72.277.965.354.406.129.776.111 1.069.067.327-.049 1.006-.411 1.147-.809z"/></svg>
+                        <a href="https://wa.me/972509798704?text=%D7%A9%D7%9C%D7%95%D7%9D%20%D7%9E%D7%90%D7%95%D7%A8%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%9E%D7%94%D7%90%D7%AA%D7%A8%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A4%D7%A8%D7%98%D7%99%D7%9D%20%D7%A2%D7%9C%20%D7%90%D7%91%D7%98%D7%97%D7%AA%20%D7%94%D7%A2%D7%A1%D7%A7%20%D7%A9%D7%9C%D7%99." target="_blank" class="inline-flex items-center justify-center gap-2 px-6 h-12 text-sm font-bold text-brand-textPrimary border border-brand-border bg-brand-bg hover:border-brand-blue hover:bg-brand-white transition-all duration-200 rounded focus:outline-none focus:ring-2 focus:ring-brand-blue focus:ring-offset-2">
+                            <!-- WhatsApp Icon -->
+                            <svg class="w-4 h-4 fill-current text-green-600" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.504-5.711-1.465L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.963C16.388 2.025 13.91 1 11.3 1 6.131 1 1.922 5.161 1.919 10.3c-.001 1.702.447 3.366 1.301 4.848l-.427 1.56 1.597-.414zM17.65 19.3c.094-.15.485-.708.579-.858.093-.15-.094-.325-.281-.413s-1.124-.554-1.218-.591-.187-.038-.281.094-.375.469-.469.581-.187.113-.375.019a4.736 4.736 0 0 1-1.393-.859 5.228 5.228 0 0 1-1.012-1.261c-.113-.188-.012-.288.081-.381.085-.084.188-.225.281-.338.094-.112.125-.188.188-.313s.031-.244-.015-.338-.375-.901-.516-1.238c-.137-.329-.277-.281-.375-.281h-.32c-.113 0-.294.042-.449.213-.155.171-.592.578-.592 1.411s.607 1.636.691 1.749c.084.113 1.194 1.823 2.894 2.553.404.174.72.277.965.354.406.129.776.111 1.069.067.327-.049 1.006-.411 1.147-.809z"/></svg>
                             <span>שליחת הודעה בוואטסאפ</span>
                         </a>
                     </div>
                 </div>
 
-                <!-- Simplified static shield/illustration (30% cyber atmosphere) -->
+                <!-- Non-threatening Storefront Protected Layer Illustration (30% Tech atmosphere) -->
                 <div class="lg:col-span-5 relative flex justify-center items-center order-2">
-                    <div class="relative w-full max-w-xs sm:max-w-sm h-64 sm:h-80 border border-brand-border bg-brand-card flex flex-col justify-center items-center p-8 rounded shadow-md overflow-hidden">
+                    <div class="relative w-full max-w-xs sm:max-w-sm h-64 sm:h-80 bg-brand-bg border border-brand-border flex flex-col justify-center items-center p-6 rounded shadow-sm">
                         
-                        <!-- Static, clean cybersecurity graphics without active feeds -->
-                        <div class="relative w-28 h-28 border border-brand-border rounded-full flex items-center justify-center bg-brand-bg/50">
-                            <!-- Inner static circle and lock -->
-                            <div class="w-20 h-20 border border-brand-border rounded-full flex items-center justify-center">
-                                <svg class="w-10 h-10 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.745 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" />
-                                </svg>
-                            </div>
-                        </div>
+                        <!-- Clean, elegant, scalable vector illustration of a protected small business -->
+                        <svg class="w-32 h-32 text-brand-blue" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="איור של עסק קטן המוגן באמצעות שכבות אבטחה">
+                            <!-- Storefront Building -->
+                            <rect x="25" y="45" width="70" height="50" rx="3" fill="white" stroke="#0B1F33" stroke-width="2"/>
+                            <!-- Storefront canopy -->
+                            <path d="M22 45l5-12h66l5 12H22z" fill="#0F8B8D" stroke="#0B1F33" stroke-width="2"/>
+                            <!-- Door and window -->
+                            <rect x="35" y="65" width="20" height="30" fill="#F6F9FC" stroke="#0B1F33" stroke-width="1.5"/>
+                            <rect x="65" y="60" width="20" height="20" fill="#F6F9FC" stroke="#0B1F33" stroke-width="1.5"/>
+                            <!-- Concentric defense shields -->
+                            <path d="M12 60c0-26 21-47 47-47s48 21 48 47" stroke="#1769E0" stroke-width="2" stroke-dasharray="4 4" class="opacity-70"/>
+                            <path d="M5 60c0-30 24-55 54-55s55 25 55 55" stroke="#0F8B8D" stroke-width="1.5" class="opacity-60"/>
+                            <!-- Checkmark on top -->
+                            <circle cx="60" cy="13" r="8" fill="#1769E0"/>
+                            <path d="M57 13l2 2 4-4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
 
-                        <div class="text-center mt-6">
-                            <span class="text-xs font-mono tracking-wider text-brand-orange block uppercase font-semibold">אבטחת מידע וניהול סיכונים</span>
-                            <p class="text-xs text-brand-textSecondary mt-2 max-w-[200px] leading-relaxed mx-auto">מעטפת הגנה אישית לעסקים קטנים ובינוניים</p>
+                        <div class="text-center mt-4">
+                            <span class="text-xs font-bold text-brand-header tracking-wide block font-heebo">אבטחת מידע מותאמת אישית</span>
+                            <p class="text-xs text-brand-textSecondary mt-1 leading-relaxed max-w-[220px] mx-auto">הגנה נכונה ששומרת על הלקוחות והנכסים שלך</p>
                         </div>
                     </div>
                 </div>
@@ -209,69 +217,76 @@
         </div>
     </section>
 
-    <!-- 3. Potential Business Impact (Clear and Approachable Service) -->
-    <section class="relative z-10 py-16 border-b border-brand-border/60">
+    <!-- 3. Potential Business Impact (אזור הסיכון) -->
+    <section class="relative z-10 py-16 bg-brand-white border-b border-brand-border">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-right space-y-6">
             
-            <h2 class="text-2xl sm:text-3xl font-extrabold text-white font-heebo tracking-tight">
-                כשמידע ננעל, גם העסק עלול להיעצר
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-brand-header font-heebo tracking-tight">
+                אירוע סייבר יכול לעצור את הפעילות ברגע
             </h2>
-            <div class="w-12 h-[1px] bg-brand-orange"></div>
+            <div class="w-12 h-[1px] bg-brand-turquoise"></div>
             
-            <p class="text-base sm:text-lg text-brand-textPrimary font-light leading-relaxed max-w-3xl">
-                התוצאה עלולה להיות השבתת הפעילות, אובדן מסמכים, דליפת פרטי לקוחות, דרישת כופר ופגיעה באמון שנבנה מול הלקוחות. השירות שלי עוזר לך להבין מה מוגן, היכן קיימים פערים ומה עושים במקרה חירום. היערכות נכונה יכולה לצמצם את הנזק, לקצר את זמן ההתאוששות ולעזור לעסק לחזור לפעילות מהר יותר.
-            </p>
+            <div class="text-base sm:text-lg text-brand-textPrimary font-light leading-relaxed max-w-3xl space-y-4">
+                <p>
+                    אירוע סייבר עלול לגרום להשבתת העבודה, אובדן מסמכים, דליפת פרטי לקוחות, דרישת כופר ופגיעה באמון שנבנה במשך שנים. גם כאשר קיים גיבוי, לא תמיד ניתן לשחזר הכול במהירות.
+                </p>
+                <p>
+                    לכן חשוב להבין מראש מה מוגן, היכן קיימים פערים ומה צריך לעשות במקרה חירום. היערכות נכונה יכולה לצמצם את הנזק, לקצר את זמן ההתאוששות ולעזור לעסק לחזור לפעילות מהר יותר.
+                </p>
+            </div>
         </div>
     </section>
 
-    <!-- 4. Statistic Section (Only One Verified Stat) -->
-    <section class="relative z-10 py-12 bg-brand-card/25 border-b border-brand-border/60">
+    <!-- 4. The Israeli Statistic (הנתון הישראלי) -->
+    <section class="relative z-10 py-12 bg-brand-bg border-b border-brand-border">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+            <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12 bg-brand-white border border-brand-border p-8 rounded shadow-sm">
                 
-                <!-- Stat display -->
+                <!-- Large Number -->
                 <div class="flex-shrink-0 text-center md:text-right border-l-0 md:border-l border-brand-border pl-0 md:pl-12 pb-4 md:pb-0">
-                    <span class="text-5xl sm:text-6xl font-black text-brand-orange font-mono block">1 מכל 10</span>
+                    <span class="text-5xl sm:text-6xl font-black text-brand-warning font-mono block">1 מכל 10</span>
                 </div>
                 
-                <!-- Text & Link -->
+                <!-- Text and Reference Link -->
                 <div class="text-right space-y-3 max-w-xl">
-                    <p class="text-sm sm:text-base text-brand-textPrimary leading-relaxed">
-                        לפי סקר הסוכנות לעסקים קטנים ובינוניים לשנת 2024, אחד מכל עשרה עסקים בישראל המעסיקים 5 עד 19 עובדים דיווח שחווה מתקפת סייבר בשנה האחרונה.
+                    <p class="text-sm sm:text-base font-medium text-brand-textPrimary leading-relaxed">
+                        עסקים בישראל המעסיקים 5 עד 19 עובדים דיווח שחווה מתקפת סייבר בשנה האחרונה.
                     </p>
-                    <a href="https://www.sba.org.il/hb/PolicyAndInformation/Researches/Pages/sr79.aspx" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-mono font-bold text-brand-orange hover:underline uppercase">
-                        <span>לצפייה במקור</span>
-                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" /></svg>
-                    </a>
+                    <div class="text-xs text-brand-textSecondary font-medium">
+                        מקור: 
+                        <a href="https://www.sba.org.il/hb/PolicyAndInformation/Researches/Pages/sr79.aspx" target="_blank" class="text-brand-blue hover:text-brand-blueHover font-bold underline inline-flex items-center gap-1 focus:outline-none focus:ring-2 focus:ring-brand-blue">
+                            סקר הסוכנות לעסקים קטנים ובינוניים לשנת 2024
+                        </a>
+                    </div>
                 </div>
                 
             </div>
         </div>
     </section>
 
-    <!-- 5. Services Section (Exactly Four Service Cards of equal height) -->
-    <section id="services" class="relative z-10 py-16 border-b border-brand-border/60">
+    <!-- 5. Services Section (השירות) -->
+    <section id="services" class="relative z-10 py-16 bg-brand-white border-b border-brand-border">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <!-- Section Header -->
             <div class="text-right max-w-3xl space-y-3 mb-12">
-                <h2 class="text-2xl sm:text-3xl font-extrabold text-white font-heebo tracking-tight">מה השירות כולל?</h2>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-brand-header font-heebo tracking-tight">מה השירות כולל?</h2>
                 <p class="text-brand-textSecondary text-sm sm:text-base font-light">
                     ליווי שנועד לעזור לך להבין מה מצב האבטחה בעסק, מה כדאי לשפר ואיך לפעול אם מתרחש אירוע.
                 </p>
-                <div class="w-12 h-[1px] bg-brand-orange mt-2"></div>
+                <div class="w-12 h-[1px] bg-brand-turquoise mt-2"></div>
             </div>
 
-            <!-- Service Cards Row -->
+            <!-- Service Cards Row (Equal Height, Consistent Spacing) -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
                 
                 <!-- Card 1 -->
-                <div class="bg-brand-card border border-brand-border p-6 rounded flex flex-col justify-between hover:border-brand-orange/40 transition-colors duration-200">
+                <div class="bg-brand-white border border-brand-border p-6 rounded flex flex-col justify-between hover:border-brand-blue/50 transition-colors duration-200 shadow-sm">
                     <div class="space-y-4">
-                        <div class="w-9 h-9 border border-brand-border bg-brand-bg text-brand-orange flex items-center justify-center rounded">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        <div class="w-10 h-10 border border-brand-border bg-brand-bg text-brand-blue flex items-center justify-center rounded-lg">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                         </div>
-                        <h3 class="text-base font-bold text-white font-heebo">אבחון מצב אבטחת המידע בעסק</h3>
+                        <h3 class="text-base font-bold text-brand-header font-heebo leading-tight">אבחון מצב אבטחת המידע בעסק</h3>
                         <p class="text-xs sm:text-sm text-brand-textSecondary font-light leading-relaxed">
                             בדיקה כללית של המחשבים, החשבונות, הגישה למידע, הגיבויים והמערכות החשובות לעסק, כדי להבין מה מוגן והיכן קיימים פערים.
                         </p>
@@ -279,12 +294,12 @@
                 </div>
 
                 <!-- Card 2 -->
-                <div class="bg-brand-card border border-brand-border p-6 rounded flex flex-col justify-between hover:border-brand-orange/40 transition-colors duration-200">
+                <div class="bg-brand-white border border-brand-border p-6 rounded flex flex-col justify-between hover:border-brand-blue/50 transition-colors duration-200 shadow-sm">
                     <div class="space-y-4">
-                        <div class="w-9 h-9 border border-brand-border bg-brand-bg text-brand-orange flex items-center justify-center rounded">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.75 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" /></svg>
+                        <div class="w-10 h-10 border border-brand-border bg-brand-bg text-brand-blue flex items-center justify-center rounded-lg">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.75 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" /></svg>
                         </div>
-                        <h3 class="text-base font-bold text-white font-heebo">תוכנית מסודרת לשיפור ההגנה</h3>
+                        <h3 class="text-base font-bold text-brand-header font-heebo leading-tight">תוכנית מסודרת לשיפור ההגנה</h3>
                         <p class="text-xs sm:text-sm text-brand-textSecondary font-light leading-relaxed">
                             דוח ברור עם המלצות לפי סדר עדיפות: מה כדאי לתקן מיד, מה אפשר לשפר בהמשך ומה מתאים לצרכים ולתקציב של העסק.
                         </p>
@@ -292,12 +307,12 @@
                 </div>
 
                 <!-- Card 3 -->
-                <div class="bg-brand-card border border-brand-border p-6 rounded flex flex-col justify-between hover:border-brand-orange/40 transition-colors duration-200">
+                <div class="bg-brand-white border border-brand-border p-6 rounded flex flex-col justify-between hover:border-brand-blue/50 transition-colors duration-200 shadow-sm">
                     <div class="space-y-4">
-                        <div class="w-9 h-9 border border-brand-border bg-brand-bg text-brand-orange flex items-center justify-center rounded">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" /></svg>
+                        <div class="w-10 h-10 border border-brand-border bg-brand-bg text-brand-blue flex items-center justify-center rounded-lg">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" /></svg>
                         </div>
-                        <h3 class="text-base font-bold text-white font-heebo">ליווי ובדיקות תקופתיות</h3>
+                        <h3 class="text-base font-bold text-brand-header font-heebo leading-tight">ליווי ובדיקות תקופתיות</h3>
                         <p class="text-xs sm:text-sm text-brand-textSecondary font-light leading-relaxed">
                             מעקב אחר הטיפול בפערים ובדיקה תקופתית של שינויים בעסק, בחשבונות ובמערכות החשובות.
                         </p>
@@ -305,12 +320,12 @@
                 </div>
 
                 <!-- Card 4 -->
-                <div class="bg-brand-card border border-brand-border p-6 rounded flex flex-col justify-between hover:border-brand-orange/40 transition-colors duration-200">
+                <div class="bg-brand-white border border-brand-border p-6 rounded flex flex-col justify-between hover:border-brand-blue/50 transition-colors duration-200 shadow-sm">
                     <div class="space-y-4">
-                        <div class="w-9 h-9 border border-brand-border bg-brand-bg text-brand-orange flex items-center justify-center rounded">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+                        <div class="w-10 h-10 border border-brand-border bg-brand-bg text-brand-blue flex items-center justify-center rounded-lg">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
                         </div>
-                        <h3 class="text-base font-bold text-white font-heebo">היערכות וטיפול באירועי סייבר</h3>
+                        <h3 class="text-base font-bold text-brand-header font-heebo leading-tight">היערכות וטיפול באירועי סייבר</h3>
                         <p class="text-xs sm:text-sm text-brand-textSecondary font-light leading-relaxed">
                             הגדרת נוהל עבודה פשוט וברור למקרה של אירוע, כדי שכולם ידעו למי פונים ומה עושים בדקות הראשונות.
                         </p>
@@ -322,48 +337,48 @@
     </section>
 
     <!-- 6. How the Service Works -->
-    <section id="how-it-works" class="relative z-10 py-16 bg-brand-card/15 border-b border-brand-border/60">
+    <section id="how-it-works" class="relative z-10 py-16 bg-brand-bg border-b border-brand-border">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <!-- Section Header -->
             <div class="text-right max-w-3xl space-y-2 mb-12">
-                <h2 class="text-2xl sm:text-3xl font-extrabold text-white font-heebo tracking-tight">איך זה עובד?</h2>
-                <div class="w-12 h-[1px] bg-brand-orange mt-2"></div>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-brand-header font-heebo tracking-tight">איך זה עובד?</h2>
+                <div class="w-12 h-[1px] bg-brand-turquoise mt-2"></div>
             </div>
 
             <!-- Steps Grid -->
             <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
                 <!-- Step 1 -->
-                <div class="p-6 border border-brand-border bg-brand-card rounded relative">
-                    <span class="text-3xl font-bold text-brand-orange/20 font-mono absolute top-4 left-6">01</span>
-                    <h3 class="text-base font-bold text-white mb-2 font-heebo">שיחת היכרות ראשונית</h3>
+                <div class="p-6 border border-brand-border bg-brand-white rounded shadow-sm relative">
+                    <span class="text-3xl font-bold text-brand-blue/15 font-mono absolute top-4 left-6">01</span>
+                    <h3 class="text-base font-bold text-brand-header mb-2 font-heebo">שיחת היכרות ראשונית</h3>
                     <p class="text-xs sm:text-sm text-brand-textSecondary leading-relaxed font-light">
                         נבין יחד מהן הפעילות העסקית המרכזית שלך, היכן שמור המידע הרגיש ומהם החששות החשובים לך ביותר.
                     </p>
                 </div>
 
                 <!-- Step 2 -->
-                <div class="p-6 border border-brand-border bg-brand-card rounded relative">
-                    <span class="text-3xl font-bold text-brand-orange/20 font-mono absolute top-4 left-6">02</span>
-                    <h3 class="text-base font-bold text-white mb-2 font-heebo">אבחון ומיפוי פערים</h3>
+                <div class="p-6 border border-brand-border bg-brand-white rounded shadow-sm relative">
+                    <span class="text-3xl font-bold text-brand-blue/15 font-mono absolute top-4 left-6">02</span>
+                    <h3 class="text-base font-bold text-brand-header mb-2 font-heebo">אבחון ומיפוי פערים</h3>
                     <p class="text-xs sm:text-sm text-brand-textSecondary leading-relaxed font-light">
-                        אני מבצע בדיקה יסודית של המחשבים, הרשאות החשבונות של העובדים, הגיבויים ומערכות הענן במשרד.
+                        אני מבצע בדיקה יסודית ומעשית של המחשבים, הרשאות החשבונות של העובדים, הגיבויים ומערכות הענן במשרד.
                     </p>
                 </div>
 
                 <!-- Step 3 -->
-                <div class="p-6 border border-brand-border bg-brand-card rounded relative">
-                    <span class="text-3xl font-bold text-brand-orange/20 font-mono absolute top-4 left-6">03</span>
-                    <h3 class="text-base font-bold text-white mb-2 font-heebo">הגשת דוח המלצות</h3>
+                <div class="p-6 border border-brand-border bg-brand-white rounded shadow-sm relative">
+                    <span class="text-3xl font-bold text-brand-blue/15 font-mono absolute top-4 left-6">03</span>
+                    <h3 class="text-base font-bold text-brand-header mb-2 font-heebo">קבלת דוח המלצות</h3>
                     <p class="text-xs sm:text-sm text-brand-textSecondary leading-relaxed font-light">
                         תקבל דוח קריא וברור בעברית פשוטה שמדרג את הפעולות הנדרשות לביצוע לפי סדר עדיפויות שתואם לתקציב שלך.
                     </p>
                 </div>
 
                 <!-- Step 4 -->
-                <div class="p-6 border border-brand-border bg-brand-card rounded relative">
-                    <span class="text-3xl font-bold text-brand-orange/20 font-mono absolute top-4 left-6">04</span>
-                    <h3 class="text-base font-bold text-white mb-2 font-heebo">יישום וליווי תקופתי</h3>
+                <div class="p-6 border border-brand-border bg-brand-white rounded shadow-sm relative">
+                    <span class="text-3xl font-bold text-brand-blue/15 font-mono absolute top-4 left-6">04</span>
+                    <h3 class="text-base font-bold text-brand-header mb-2 font-heebo">יישום וליווי שוטף</h3>
                     <p class="text-xs sm:text-sm text-brand-textSecondary leading-relaxed font-light">
                         אני מלווה אותך ועובד בשיתוף פעולה מול איש המחשבים או ה-IT שלך כדי לוודא שכל הפערים נסגרים כראוי.
                     </p>
@@ -373,76 +388,81 @@
         </div>
     </section>
 
-    <!-- 7. DFIR Support Included (Factual and Restrained) -->
-    <section class="relative z-10 py-16 border-b border-brand-border/60">
+    <!-- 7. DFIR Support Included in the Annual Service -->
+    <section class="relative z-10 py-16 bg-brand-white border-b border-brand-border">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-right space-y-6">
             
-            <h2 class="text-2xl sm:text-3xl font-extrabold text-white font-heebo tracking-tight">
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-brand-header font-heebo tracking-tight">
                 היערכות וטיפול באירועי סייבר כלולות בשירות השנתי
             </h2>
-            <div class="w-12 h-[1px] bg-brand-orange"></div>
+            <div class="w-12 h-[1px] bg-brand-turquoise"></div>
             
             <div class="space-y-4 text-brand-textPrimary font-light text-sm sm:text-base leading-relaxed">
                 <p>
                     אם עולה חשד לפריצה או לפגיעה במידע, ארבע שעות העבודה הראשונות מוקדשות להערכת המצב, לפעולות בלימה ראשוניות, לאיסוף ולניתוח מידע ולהכוונת ההתאוששות. היקף הטיפול תלוי בסוג האירוע ובמורכבותו.
                 </p>
-                <p class="font-bold text-brand-orange">
+                <p class="font-bold text-brand-warning">
                     המענה לאירועים ניתן בשעות הפעילות, בתיאום ובכפוף לזמינות.
                 </p>
-                <p class="text-xs text-brand-textSecondary">
+                <p class="text-xs text-brand-textSecondary leading-relaxed">
                     * ארבע השעות מהוות מכסה שנתית משותפת לכל האירועים ואינן מבטיחות השלמת חקירה או התאוששות מלאה במסגרת הזמן הזה.
                 </p>
             </div>
         </div>
     </section>
 
-    <!-- 8. About Maor (Factual Dossier / Profile) -->
-    <section id="about" class="relative z-10 py-16 overflow-hidden border-b border-brand-border/60">
+    <!-- 8. About the Service Provider (אודות נותן השירות) -->
+    <section id="about" class="relative z-10 py-16 bg-brand-bg border-b border-brand-border overflow-hidden">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 
-                <!-- Portrait Placeholder Frame (Left column visually in RTL) -->
+                <!-- Portrait Placeholder Frame -->
                 <div class="lg:col-span-5 flex justify-center order-2">
                     <div class="relative w-full max-w-xs sm:max-w-sm">
-                        <!-- Structural border -->
-                        <div class="absolute inset-0 border border-brand-border translate-x-2.5 translate-y-2.5 pointer-events-none rounded"></div>
-                        <div class="relative bg-brand-card border border-brand-border p-6 rounded flex flex-col items-center justify-center h-64 sm:h-80">
+                        <!-- Clean structural border -->
+                        <div class="absolute inset-0 border border-brand-border translate-x-2 translate-y-2 pointer-events-none rounded"></div>
+                        <div class="relative bg-brand-white border border-brand-border p-6 rounded flex flex-col items-center justify-center h-64 sm:h-80 shadow-sm">
                             
-                            <!-- Silhouette Graphic representing photo placeholder -->
-                            <div class="w-20 h-20 rounded-full border border-brand-border bg-brand-bg flex items-center justify-center text-brand-orange/60 mb-4">
+                            <!-- Silhouette Graphic placeholder for Maor's photo -->
+                            <div class="w-20 h-20 rounded-full border border-brand-border bg-brand-bg flex items-center justify-center text-brand-blue mb-4">
                                 <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.2">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
                                 </svg>
                             </div>
                             
-                            <span class="text-xs font-mono text-brand-orange uppercase font-semibold">[ תמונת פורטרט ]</span>
+                            <span class="text-xs font-bold text-brand-blue uppercase font-heebo">[ תמונת פורטרט ]</span>
                             <span class="text-xs text-brand-textSecondary mt-2">מאור גבאי</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Text Content (Right column in RTL) -->
+                <!-- Text Content -->
                 <div class="lg:col-span-7 space-y-6 text-right order-1">
-                    <span class="text-brand-orange text-xs font-mono tracking-wider">[ פרופיל מקצועי ]</span>
-                    <h2 class="text-2xl sm:text-3xl font-extrabold text-white font-heebo tracking-tight">נעים להכיר, אני מאור גבאי</h2>
-                    <div class="w-12 h-[1px] bg-brand-orange"></div>
+                    <span class="text-brand-blue text-xs font-bold tracking-wider uppercase font-heebo">[ אודות ]</span>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-brand-header font-heebo tracking-tight">מי עומד מאחורי השירות?</h2>
+                    <div class="w-12 h-[1px] bg-brand-turquoise"></div>
                     
-                    <p class="text-brand-textPrimary font-light leading-relaxed text-sm sm:text-base">
-                        אני מאור גבאי, חוקר סייבר ומהנדס זיהוי איומים, בעל ניסיון בטיפול באירועי סייבר ובחקירות דיגיטליות. אני מציע לעסקים קטנים ליווי אישי, דיסקרטי ומקצועי, בשפה ברורה ובשיתוף איש המחשבים של העסק, אם קיים.
-                    </p>
+                    <div class="space-y-4 text-brand-textPrimary font-light leading-relaxed text-sm sm:text-base">
+                        <p>
+                            אני מאור גבאי, חוקר סייבר ומהנדס זיהוי איומים, בעל ניסיון רב בטיפול באירועי סייבר ובחקירות דיגיטליות.
+                        </p>
+                        <p>
+                            אני מציע לעסקים קטנים ליווי אישי, דיסקרטי ומקצועי, בשפה ברורה ובהתאם לסביבת העבודה ולצרכים שלהם.
+                        </p>
+                    </div>
 
                     <!-- Factual Highlights -->
                     <div class="space-y-2 border-t border-brand-border pt-4">
-                        <div class="flex items-center gap-2.5 text-xs sm:text-sm text-brand-textPrimary">
-                            <span class="w-1.5 h-1.5 rounded-full bg-brand-orange"></span>
+                        <div class="flex items-center gap-2.5 text-xs sm:text-sm text-brand-textPrimary font-medium">
+                            <span class="w-1.5 h-1.5 rounded-full bg-brand-blue"></span>
                             <span>חקירה ותגובה לאירועי סייבר</span>
                         </div>
-                        <div class="flex items-center gap-2.5 text-xs sm:text-sm text-brand-textPrimary">
-                            <span class="w-1.5 h-1.5 rounded-full bg-brand-orange"></span>
+                        <div class="flex items-center gap-2.5 text-xs sm:text-sm text-brand-textPrimary font-medium">
+                            <span class="w-1.5 h-1.5 rounded-full bg-brand-blue"></span>
                             <span>פורנזיקה דיגיטלית</span>
                         </div>
-                        <div class="flex items-center gap-2.5 text-xs sm:text-sm text-brand-textPrimary">
-                            <span class="w-1.5 h-1.5 rounded-full bg-brand-orange"></span>
+                        <div class="flex items-center gap-2.5 text-xs sm:text-sm text-brand-textPrimary font-medium">
+                            <span class="w-1.5 h-1.5 rounded-full bg-brand-blue"></span>
                             <span>פיתוח וזיהוי איומים</span>
                         </div>
                     </div>
@@ -453,22 +473,22 @@
     </section>
 
     <!-- 9. Frequently Asked Questions (FAQ Accordion) -->
-    <section id="faq" class="relative z-10 py-16 bg-brand-card/15 border-b border-brand-border/60">
+    <section id="faq" class="relative z-10 py-16 bg-brand-white border-b border-brand-border">
         <div class="max-w-4xl mx-auto px-4 sm:px-6">
             
             <!-- Section Header -->
             <div class="text-center space-y-2 mb-12">
-                <span class="text-brand-orange text-xs font-mono tracking-wider">[ שאלות נפוצות ]</span>
-                <h2 class="text-2xl sm:text-3xl font-extrabold text-white font-heebo tracking-tight">מידע נוסף ושאלות נפוצות</h2>
-                <div class="w-12 h-[1px] bg-brand-orange mx-auto mt-2"></div>
+                <span class="text-brand-blue text-xs font-bold tracking-wider font-heebo">[ שאלות נפוצות ]</span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-brand-header font-heebo tracking-tight">מידע נוסף ושאלות נפוצות</h2>
+                <div class="w-12 h-[1px] bg-brand-turquoise mx-auto mt-2"></div>
             </div>
 
             <!-- Accordion Container -->
             <div class="space-y-4">
                 
                 <!-- FAQ Item 1 -->
-                <div class="bg-brand-card border border-brand-border rounded overflow-hidden transition-all duration-300">
-                    <button class="faq-toggle w-full px-6 py-5 flex items-center justify-between text-right font-bold text-white hover:text-brand-orange transition-colors duration-200 focus:outline-none" aria-expanded="false">
+                <div class="bg-brand-white border border-brand-border rounded overflow-hidden transition-all duration-300 shadow-sm">
+                    <button class="faq-toggle w-full px-6 py-5 flex items-center justify-between text-right font-bold text-brand-header hover:text-brand-blue transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-brand-blue" aria-expanded="false">
                         <span class="text-sm sm:text-base font-heebo">האם השירות מתאים גם לעסק עם כמה מחשבים בודדים?</span>
                         <svg class="w-4 h-4 text-brand-textSecondary transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
                     </button>
@@ -480,8 +500,8 @@
                 </div>
 
                 <!-- FAQ Item 2 -->
-                <div class="bg-brand-card border border-brand-border rounded overflow-hidden transition-all duration-300">
-                    <button class="faq-toggle w-full px-6 py-5 flex items-center justify-between text-right font-bold text-white hover:text-brand-orange transition-colors duration-200 focus:outline-none" aria-expanded="false">
+                <div class="bg-brand-white border border-brand-border rounded overflow-hidden transition-all duration-300 shadow-sm">
+                    <button class="faq-toggle w-full px-6 py-5 flex items-center justify-between text-right font-bold text-brand-header hover:text-brand-blue transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-brand-blue" aria-expanded="false">
                         <span class="text-sm sm:text-base font-heebo">האם יש התחייבות לזמינות מיידית במקרה חירום?</span>
                         <svg class="w-4 h-4 text-brand-textSecondary transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
                     </button>
@@ -496,41 +516,56 @@
         </div>
     </section>
 
-    <!-- 10. Contact Section -->
-    <section id="contact" class="relative z-10 py-16 overflow-hidden">
+    <!-- 10. Call to Action Section (הנעה לפעולה) -->
+    <section class="relative z-10 py-16 bg-brand-bg border-b border-brand-border">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-brand-header font-heebo tracking-tight">אתה לא צריך להבין בסייבר</h2>
+            <p class="text-base sm:text-lg text-brand-textSecondary max-w-2xl mx-auto font-light leading-relaxed">
+                אתה כן צריך לדעת מה מגן על העסק שלך ומה עושים ברגע האמת. היערכות היום יכולה לחסוך לעסק כסף, זמן וכאב ראש בעתיד.
+            </p>
+            <div class="pt-2">
+                <a href="#contact" class="inline-flex items-center justify-center px-8 h-12 text-sm font-bold text-brand-white bg-brand-blue hover:bg-brand-blueHover active:scale-95 transition-all duration-200 rounded shadow-md focus:outline-none focus:ring-2 focus:ring-brand-blue focus:ring-offset-2">
+                    שלחו לי הודעה
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 11. Contact Section (יצירת קשר) -->
+    <section id="contact" class="relative z-10 py-16 bg-brand-white overflow-hidden">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
                 
                 <!-- Contact Info Column -->
                 <div class="lg:col-span-5 space-y-6 text-right self-center">
-                    <span class="text-brand-orange text-xs font-mono tracking-wider">[ צור קשר ]</span>
-                    <h2 class="text-3xl font-extrabold text-white font-heebo tracking-tight">בואו נבדוק עד כמה העסק שלכם מוכן</h2>
+                    <span class="text-brand-blue text-xs font-bold tracking-wider uppercase font-heebo">[ קשר ישיר ]</span>
+                    <h2 class="text-3xl font-extrabold text-brand-header font-heebo tracking-tight">בואו נבדוק עד כמה העסק שלכם מוכן</h2>
                     <p class="text-brand-textSecondary font-light leading-relaxed text-xs sm:text-sm">
                         השאירו פרטים או שלחו הודעה בוואטסאפ לתיאום שיחת היכרות ללא התחייבות.
                     </p>
 
-                    <!-- Direct Fallbacks -->
+                    <!-- Direct Fallbacks and Trust Points -->
                     <div class="space-y-4 pt-4 text-xs sm:text-sm text-brand-textPrimary border-t border-brand-border font-medium">
                         <div class="flex items-center gap-3">
-                            <span class="text-brand-orange">✓</span>
-                            <span>ייעוץ ובדיקה ראשונית ללא עלות וללא התחייבות</span>
+                            <span class="text-brand-blue">✓</span>
+                            <span>ייעוץ ובדיקה ראשונית ללא התחייבות</span>
                         </div>
                         <div class="flex items-center gap-3">
-                            <span class="text-brand-orange">✓</span>
+                            <span class="text-brand-blue">✓</span>
                             <span>אפשרות להסכם סודיות (NDA) בהתאם לצורך</span>
                         </div>
                         <div class="flex items-center gap-3">
-                            <span class="text-brand-orange">✉</span>
-                            <span>דוא"ל ישיר לפניות: <a href="mailto:gabaymaor123@gmail.com" class="text-brand-orange hover:underline font-mono">gabaymaor123@gmail.com</a></span>
+                            <span class="text-brand-blue">✉</span>
+                            <span>דוא"ל ישיר לפניות: <a href="mailto:gabaymaor123@gmail.com" class="text-brand-blue hover:underline font-mono">gabaymaor123@gmail.com</a></span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Form Column -->
+                <!-- Form Column (Height >= 48px targets on buttons & inputs) -->
                 <div class="lg:col-span-7">
-                    <div class="relative bg-brand-card border border-brand-border p-6 sm:p-10 rounded shadow-md">
+                    <div class="relative bg-brand-bg border border-brand-border p-6 sm:p-10 rounded shadow-sm">
                         
-                        <h3 class="text-base sm:text-lg font-bold text-white mb-6 font-heebo text-right">טופס תיאום שיחת היכרות</h3>
+                        <h3 class="text-base sm:text-lg font-bold text-brand-header mb-6 font-heebo text-right">טופס תיאום שיחת היכרות</h3>
 
                         <!-- Formspree form with customized AJAX execution to avoid redirects -->
                         <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-5 text-right relative z-10">
@@ -538,30 +573,30 @@
                             <!-- Full Name Field -->
                             <div>
                                 <label for="name" class="block text-xs text-brand-textSecondary mb-2 font-medium">שם מלא *</label>
-                                <input type="text" id="name" name="name" required class="w-full px-4 h-12 bg-brand-bg border border-brand-border focus:border-brand-orange text-white text-sm transition-all outline-none text-right rounded" placeholder="ישראל ישראלי">
+                                <input type="text" id="name" name="name" required class="w-full px-4 h-12 bg-brand-white border border-brand-border focus:border-brand-blue text-brand-textPrimary text-sm transition-all outline-none text-right rounded focus:ring-2 focus:ring-brand-blue" placeholder="ישראל ישראלי">
                             </div>
 
                             <!-- Phone Field -->
                             <div>
                                 <label for="phone" class="block text-xs text-brand-textSecondary mb-2 font-medium">מספר טלפון *</label>
-                                <input type="tel" id="phone" name="phone" required class="w-full px-4 h-12 bg-brand-bg border border-brand-border focus:border-brand-orange text-white text-sm transition-all outline-none text-right rounded" placeholder="050-1234567">
+                                <input type="tel" id="phone" name="phone" required class="w-full px-4 h-12 bg-brand-white border border-brand-border focus:border-brand-blue text-brand-textPrimary text-sm transition-all outline-none text-right rounded focus:ring-2 focus:ring-brand-blue" placeholder="050-1234567">
                             </div>
 
                             <!-- Business Name Field -->
                             <div>
                                 <label for="business" class="block text-xs text-brand-textSecondary mb-2 font-medium">שם העסק / החברה *</label>
-                                <input type="text" id="business" name="business" required class="w-full px-4 h-12 bg-brand-bg border border-brand-border focus:border-brand-orange text-white text-sm transition-all outline-none text-right rounded" placeholder="למשל: סטודיו לצילום, משרד עורכי דין">
+                                <input type="text" id="business" name="business" required class="w-full px-4 h-12 bg-brand-white border border-brand-border focus:border-brand-blue text-brand-textPrimary text-sm transition-all outline-none text-right rounded focus:ring-2 focus:ring-brand-blue" placeholder="למשל: סטודיו לצילום, משרד עורכי דין">
                             </div>
 
                             <!-- Optional Message Field -->
                             <div>
                                 <label for="message" class="block text-xs text-brand-textSecondary mb-2 font-medium">מידע נוסף (אופציונלי)</label>
-                                <textarea id="message" name="message" rows="3" class="w-full p-4 bg-brand-bg border border-brand-border focus:border-brand-orange text-white text-sm transition-all outline-none text-right rounded resize-none" placeholder="פרטים נוספים על העסק או המערכות שלכם..."></textarea>
+                                <textarea id="message" name="message" rows="3" class="w-full p-4 bg-brand-white border border-brand-border focus:border-brand-blue text-brand-textPrimary text-sm transition-all outline-none text-right rounded resize-none focus:ring-2 focus:ring-brand-blue" placeholder="פרטים נוספים על העסק או המערכות שלכם..."></textarea>
                             </div>
 
-                            <!-- Submit Button -->
+                            <!-- Submit Button (Height >= 48px) -->
                             <div class="pt-2">
-                                <button type="submit" id="submit-btn" class="w-full flex items-center justify-center px-6 h-12 text-sm font-bold text-white bg-brand-orange hover:bg-brand-orangeHover active:scale-95 transition-all duration-200 border border-brand-orange rounded cursor-pointer">
+                                <button type="submit" id="submit-btn" class="w-full flex items-center justify-center px-6 h-12 text-sm font-bold text-brand-white bg-brand-blue hover:bg-brand-blueHover active:scale-95 transition-all duration-200 border border-brand-blue rounded cursor-pointer focus:outline-none focus:ring-2 focus:ring-brand-blue focus:ring-offset-2">
                                     אשמח לשיחת היכרות
                                 </button>
                             </div>
@@ -575,30 +610,30 @@
     </section>
 
     <!-- Success Modal Popup -->
-    <div id="success-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-brand-bg/95">
-        <div class="bg-brand-card border border-brand-orange max-w-md w-full p-8 text-center space-y-6 relative rounded">
-            <div class="w-12 h-12 border border-brand-orange text-brand-orange flex items-center justify-center mx-auto rounded-full">
+    <div id="success-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-brand-header/90">
+        <div class="bg-brand-white border border-brand-border max-w-md w-full p-8 text-center space-y-6 relative rounded shadow-2xl">
+            <div class="w-12 h-12 border border-brand-blue text-brand-blue flex items-center justify-center mx-auto rounded-full">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
             </div>
-            <h3 class="text-lg font-bold text-white font-heebo">פנייתך התקבלה בהצלחה</h3>
+            <h3 class="text-lg font-bold text-brand-header font-heebo">פנייתך התקבלה בהצלחה</h3>
             <p class="text-xs text-brand-textSecondary leading-relaxed">
                 תודה רבה על פנייתך. ההודעה הגיעה ישירות למאור גבאי.
                 <br><br>
                 שיחת היכרות ללא התחייבות תתואם עמך בהקדם האפשרי.
             </p>
-            <button id="close-modal" class="w-full h-11 bg-brand-orange text-white hover:bg-brand-orangeHover font-bold text-xs cursor-pointer rounded">
+            <button id="close-modal" class="w-full h-12 bg-brand-blue text-brand-white hover:bg-brand-blueHover font-bold text-xs cursor-pointer rounded focus:outline-none focus:ring-2 focus:ring-brand-blue">
                 סגור
             </button>
         </div>
     </div>
 
-    <!-- 11. Footer -->
-    <footer class="relative z-10 bg-brand-bg border-t border-brand-border/70 py-12">
+    <!-- 12. Footer -->
+    <footer class="relative z-10 bg-brand-white border-t border-brand-border py-12">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
             
             <!-- Brand Logo -->
-            <div class="flex items-center justify-center gap-2 text-sm font-bold text-white">
-                <span>מאור גבאי | אבטחת מידע וחקירות דיגיטליות</span>
+            <div class="flex items-center justify-center gap-2 text-sm font-bold text-brand-header">
+                <span>SteadyGuard | אבטחת מידע וחקירות דיגיטליות</span>
             </div>
 
             <!-- Footer Text -->
@@ -612,15 +647,15 @@
             </p>
 
             <!-- Copyright -->
-            <div class="text-[10px] text-slate-700 font-mono pt-2">
-                &copy; 2026 Maor Gabay Cybersecurity & DFIR. All Rights Reserved.
+            <div class="text-[10px] text-brand-textSecondary font-mono pt-2">
+                &copy; 2026 SteadyGuard. All Rights Reserved. // Provided by Maor Gabay
             </div>
 
         </div>
     </footer>
 
-    <!-- 12. Floating WhatsApp CTA Button (Clean, Non-intrusive) -->
-    <a href="https://wa.me/972509798704?text=%D7%A9%D7%9C%D7%95%D7%9D%20%D7%9E%D7%90%D7%95%D7%A8%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%9E%D7%94%D7%90%D7%AA%D7%A8%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A4%D7%A8%D7%98%D7%99%D7%9D%20%D7%A2%D7%9C%20%D7%90%D7%91%D7%98%D7%97%D7%AA%20%D7%94%D7%A2%D7%A1%D7%A7%20%D7%A9%D7%9C%D7%99." target="_blank" class="fixed bottom-6 left-6 z-50 flex items-center justify-center w-12 h-12 bg-green-600 hover:bg-green-500 text-white hover:scale-110 active:scale-95 rounded-full shadow-lg transition-all duration-200" aria-label="פנייה בוואטסאפ">
+    <!-- 13. Floating WhatsApp CTA Button (Height >= 48px) -->
+    <a href="https://wa.me/972509798704?text=%D7%A9%D7%9C%D7%95%D7%9D%20%D7%9E%D7%90%D7%95%D7%A8%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%9E%D7%94%D7%90%D7%AA%D7%A8%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A4%D7%A8%D7%98%D7%99%D7%9D%20%D7%A2%D7%9C%20%D7%90%D7%91%D7%98%D7%97%D7%AA%20%D7%94%D7%A2%D7%A1%D7%A7%20%D7%A9%D7%9C%D7%99." target="_blank" class="fixed bottom-6 left-6 z-50 flex items-center justify-center w-12 h-12 bg-green-600 hover:bg-green-500 text-brand-white hover:scale-110 active:scale-95 rounded-full shadow-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-brand-blue" aria-label="פנייה בוואטסאפ">
         <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
             <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.504-5.711-1.465L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.963C16.388 2.025 13.91 1 11.3 1 6.131 1 1.922 5.161 1.919 10.3c-.001 1.702.447 3.366 1.301 4.848l-.427 1.56 1.597-.414zM17.65 19.3c.094-.15.485-.708.579-.858.093-.15-.094-.325-.281-.413s-1.124-.554-1.218-.591-.187-.038-.281.094-.375.469-.469.581-.187.113-.375.019a4.736 4.736 0 0 1-1.393-.859 5.228 5.228 0 0 1-1.012-1.261c-.113-.188-.012-.288.081-.381.085-.084.188-.225.281-.338.094-.112.125-.188.188-.313s.031-.244-.015-.338-.375-.901-.516-1.238c-.137-.329-.277-.281-.375-.281h-.32c-.113 0-.294.042-.449.213-.155.171-.592.578-.592 1.411s.607 1.636.691 1.749c.084.113 1.194 1.823 2.894 2.553.404.174.72.277.965.354.406.129.776.111 1.069.067.327-.049 1.006-.411 1.147-.809z"/>
         </svg>
@@ -696,7 +731,7 @@
             submitBtn.disabled = true;
             submitBtn.classList.add('opacity-75', 'cursor-not-allowed');
             submitBtn.innerHTML = `
-                <svg class="animate-spin -ml-1 mr-3 h-4 w-4 text-white inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                <svg class="animate-spin -ml-1 mr-3 h-4 w-4 text-brand-white inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                     <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
                     <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                 </svg>
